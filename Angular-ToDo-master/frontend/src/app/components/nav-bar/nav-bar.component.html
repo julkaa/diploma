@@ -1,0 +1,59 @@
+<div class="wrapper">
+  <nav>
+    <ul>
+      <li>
+        <span routerLink="/"><span class="material-icons">home</span>Home</span>
+      </li>
+      <li>
+        <span routerLink="/profile"><span class="material-icons">person</span>Profile</span>
+      </li>
+      <li>
+        <span routerLink="/users"><span class="material-icons">group</span>Users</span>
+      </li>
+      <!--      <li>-->
+      <!--        <span routerLink="/todo-list"><span class="material-icons">add_task</span>Todos</span>-->
+      <!--      </li>-->
+      <li>
+        <span routerLink="/todo">Todos</span>
+      </li>
+      <li>
+        <span routerLink="/task"><span class="material-icons">bookmarks</span>Task</span>
+      </li>
+      <li>
+        <span routerLink="/game"><span class="material-icons">bookmarks</span>Game</span>
+      </li>
+      <!--      <li>-->
+      <!--        <span (click)="logOut()"><span class="material-icons">login</span>Log out</span>-->
+      <!--      </li>-->
+      <li>
+        <span routerLink="/login"><span class="material-icons">login</span>Log In</span>
+      </li>
+
+      <ng-container *ngIf="!userService.loggedIn(); else loggedIn">
+        <li>
+          <a routerLink="/registration">Check in</a>
+        </li>
+        <li>
+          <a routerLink="/login">Log in</a>
+        </li>
+      </ng-container>
+      <ng-template #loggedIn>
+        <li>
+          <a routerLink="/add-list">Add List</a>
+        </li>
+        <li>
+          <a routerLink="/list">Lists</a>
+        </li>
+        <li>
+          <a routerLink="/task">Add Task</a>
+        </li>
+        <li>
+          <a routerLink="/login" (click)="userService.logOut()">Log off</a>
+        </li>
+      </ng-template>
+    </ul>
+  </nav>
+</div>
+<!--<app-start-page></app-start-page>-->
+<home-page></home-page>
+<router-outlet></router-outlet>

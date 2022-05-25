@@ -1,0 +1,47 @@
+.router_div{
+  height: 50px;
+  float: right;
+  margin-top: -495px;
+  margin-right: 230px;
+}
+.main-box{
+  height: 500px;
+  background-color: black;
+  border: 1px solid black;
+  -webkit-box-shadow: 0 0 10px 0 #e7e7e7;
+  -moz-box-shadow: 0 0 10px 0 #e7e7e7;
+  box-shadow: 0 0 10px 0 #e7e7e7;
+  padding: 20px;
+}
+.wrapper {
+  max-width: 930px;
+  margin: 0 auto;
+  border: 1px solid black;
+  align-items: center;
+}
+.container{
+  height: 100%;
+  position: relative;
+  border: 1px solid black;
+}
+.main-wrapper{
+  margin-bottom: 50px;
+}
+.white-box1,
+.white-box-2,
+.white-box-3,
+.white-box-4,
+.white-box-5,
+.white-box-6{
+  height: 207px;
+  width: 31.5%;
+  float: left;
+  padding: 23px;
+  margin-bottom: 20px;
+}
+.first-line,
+.second-line{
+  display: flex;
+  margin-left: 1px;
+  justify-content: space-between;
+}

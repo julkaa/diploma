@@ -1,0 +1,72 @@
+.main {
+  height: 400px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  margin: auto;
+  width: 75%;
+  font-size: 70px;
+  padding: 55px 40px;
+}
+
+.wrapper {
+  height: 160px;
+  width: 40%;
+  margin: 20px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+
+  .content {
+    margin-top: 60px;
+    margin-left: 20px;
+    display: flex;
+
+    font-size: 18px;
+
+  }
+
+  &:hover {
+    background-color: #c5a84e;
+    transition: .5s;
+    transform: scale(1.03);
+
+    .material-icons {
+      color: white;
+      transition: .5s;
+    }
+  }
+
+}
+
+.material-icons {
+  color: #c5a84e;
+  margin-right: 15px;
+}
+
+.buttons {
+  position: fixed;
+  right: 0;
+  height: 30px;
+  width: 200px;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+
+  button {
+    background-color: white;
+    border: 0px;
+    cursor: pointer;
+
+    &:hover {
+      color: #c5a84e;
+    }
+  }
+
+}
+

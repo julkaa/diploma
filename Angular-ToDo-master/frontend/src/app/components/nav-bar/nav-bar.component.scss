@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  font-family: Segoe UI, sans-serif;
+  height: 100%;
+  width: 10%;
+  position: fixed;
+  z-index: 1;
+  background-color: black;
+  color: white;
+
+  ul {
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 20px 10px;
+
+    li {
+      padding-left: 10px;
+      padding-bottom: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: #c5a84e;
+        border-left: 3px solid #c5a84e;
+
+      }
+
+      span .material-icons {
+        margin-right: 2%;
+        font-size: 22px;
+        vertical-align: bottom;
+        color: #c5a84e;
+      }
+    }
+  }
+}
