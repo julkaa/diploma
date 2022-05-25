@@ -15,7 +15,8 @@ export class ListsComponent implements OnInit {
   tasks: Task[];
   //list:List;
   user;
-  user_id;
+  // tslint:disable-next-line:variable-name
+  user_id: any;
   id;
 
   constructor(

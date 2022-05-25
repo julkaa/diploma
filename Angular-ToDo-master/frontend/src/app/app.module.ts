@@ -15,6 +15,10 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { ButtonComponent } from './components/button/button.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,10 @@ import { ButtonComponent } from './components/button/button.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    DragDropModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
