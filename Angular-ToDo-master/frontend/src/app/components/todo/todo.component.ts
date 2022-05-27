@@ -18,7 +18,7 @@ export class TodoComponent implements OnInit {
   inprogress: ITask[] = [];
   done: ITask[] = [];
   updateIndex: any;
-  isEditEnabled: boolean = false;
+  isEditEnabled = false;
 
   constructor(private fb: FormBuilder) {}
 
@@ -37,7 +37,7 @@ export class TodoComponent implements OnInit {
   }
 
   onEdit(item: ITask, i: number) {
-    this.todoForm.controls.item.setValue(item.description);
+    this.todoForm.controls['item'].setValue(item.description);
     this.updateIndex = i;
     this.isEditEnabled = true;
   }

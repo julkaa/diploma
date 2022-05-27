@@ -19,6 +19,11 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,7 @@ import { MatCardModule } from '@angular/material/card';
     NavBarComponent,
     TodoComponent,
     ButtonComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +50,12 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatFormFieldModule,
     MatCardModule,
+    MatInputModule,
+    //
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

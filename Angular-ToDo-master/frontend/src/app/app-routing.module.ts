@@ -7,6 +7,7 @@ import { ListsComponent } from './components/lists/lists.component';
 import { TaskComponent } from './components/task/task.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TodoComponent } from './components/todo/todo.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: NavBarComponent },
@@ -34,6 +35,11 @@ const routes: Routes = [
     path: 'list',
     component: ListsComponent,
   },
+  {
+    path: 'not-found',
+    component: NotFoundComponent,
+  },
+  { path: '**', redirectTo: 'not-found' },
 ];
 
 @NgModule({

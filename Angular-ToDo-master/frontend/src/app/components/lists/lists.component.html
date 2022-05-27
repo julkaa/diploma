@@ -10,12 +10,10 @@
       <!--      <button routerLink="/task" (click)="newTask(list._id)" value="{{list.id}}" class="add-btn">Add Task</button>-->
       <button routerLink="/task" (click)="newTask(list._id)" class="add-btn">Add Task</button>
       <!--      <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>-->
-      <button (click)="deleteList(list_id)" class="delete-btn">Delete List</button>
-
       <div *ngFor="let task of tasks">
         <div class="task">
           <p class="task-title">{{task.text}}</p>
-          <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>
+          <!--          <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>-->
         </div>
       </div>
 

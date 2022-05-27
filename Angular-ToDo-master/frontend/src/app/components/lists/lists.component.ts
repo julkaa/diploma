@@ -17,7 +17,6 @@ export class ListsComponent implements OnInit {
   user;
   // tslint:disable-next-line:variable-name
   user_id: any;
-  id;
 
   constructor(
     private publicationService: PublicationService,
@@ -37,50 +36,50 @@ export class ListsComponent implements OnInit {
   }
 
   getLists(id) {
-    const user_id = this.user.id;
-    console.log(user_id);
-    this.publicationService.getLists(user_id).subscribe(
-      (res) => {
-        console.log(res);
-        this.lists = res.lists;
-        this.tasks = res.tasks;
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    // const user_id = this.user.id;
+    // console.log(user_id);
+    // this.publicationService.getLists(user_id).subscribe(
+    //   (res) => {
+    //     console.log(res);
+    //     this.lists = res.lists;
+    //     this.tasks = res.tasks;
+    //   },
+    //   (err) => {
+    //     console.log(err);
+    //   }
+    // );
   }
 
   deleteList(id) {
-    console.log(id);
-    this.publicationService.deleteList(id).subscribe(
-      (res) => {
-        console.log(res);
-        this.refresh();
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+    // console.log(id);
+    // this.publicationService.deleteList(id).subscribe(
+    //   (res) => {
+    //     console.log(res);
+    //     this.refresh();
+    //   },
+    //   (err) => {
+    //     console.log(err);
+    //   }
+    // );
   }
 
   newTask(event) {
     // console.log(event.target.value);
-    this.id = event.target.value;
-    localStorage.setItem('listId', this.id);
-    this.router.navigate(['/add-task']);
+    // this.id = event.target.value;
+    // localStorage.setItem('listId', this.id);
+    // this.router.navigate(['/add-task']);
   }
 
-  deleteTask(id) {
-    console.log('that is', id);
-    this.publicationService.deleteTask(id).subscribe(
-      (res) => {
-        console.log(res);
-        this.refresh();
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
-  }
+  // deleteTask(id) {
+  //   console.log('that is', id);
+  //   this.publicationService.deleteTask(id).subscribe(
+  //     (res) => {
+  //       console.log(res);
+  //       this.refresh();
+  //     },
+  //     (err) => {
+  //       console.log(err);
+  //     }
+  //   );
+  // }
 }
