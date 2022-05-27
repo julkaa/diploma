@@ -24,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     TodoComponent,
     ButtonComponent,
     NotFoundComponent,
+    TopNavComponent,
   ],
   imports: [
     BrowserModule,

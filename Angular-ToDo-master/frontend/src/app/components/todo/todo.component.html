@@ -1,9 +1,5 @@
-<!--<app-button-->
-<!--  [text]="'Back'"-->
-<!--  [route]="'/'">-->
-<!--</app-button>-->
-<router-outlet></router-outlet>
-<div class="container-fluid gx-4">
+<app-top-nav [title]="'To Do'"></app-top-nav>
+<div class="container-fluid gx-4" style="margin-top: 100px">
   <div class="row">
     <div class="col-md-3 mt-3" style="background: #303030;
         height: max-content;
@@ -106,3 +102,4 @@
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>
