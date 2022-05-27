@@ -25,6 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatOptionModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
