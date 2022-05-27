@@ -2,7 +2,7 @@ module.exports = function (app) {
   const usercontroller = require("../controllers/usercontroller");
   const listController = require("../controllers/listcontroller");
   const autorizated = require("../middleware/validateToken");
-  // app.get('/', usercontroller.nav-bar);
+  // app.get("/", usercontroller.nav - bar);
   app.post("/signup", usercontroller.signup);
   app.post("/login", usercontroller.signin);
   app.post("/add-list", autorizated.validateToken, listController.createList);

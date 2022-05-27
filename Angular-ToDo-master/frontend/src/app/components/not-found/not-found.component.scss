@@ -1,0 +1,65 @@
+.container {
+  width: 60%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+  background-color: #fff;
+  color: #4e4e4e;
+  font-family: "Roboto", sans-serif;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 40%;
+
+  img {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+.right {
+  width: inherit;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+p {
+  font-size: 2em;
+  font-weight: 100;
+  margin: 50px 0;
+}
+
+.type-writer-text {
+  font-size: 5em;
+  font-weight: 100;
+  display: inline-block;
+  border-right: 1px solid #dedede;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 1s steps(3) 0.3s 1 normal both,
+  cursorblink 0.5s infinite;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 135px;
+  }
+}
+
+@keyframes cursorblink {
+  from {
+    border-right: 1px solid #dedede;
+  }
+  to {
+    border-right: 1px solid #666;
+  }
+}

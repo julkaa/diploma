@@ -13,10 +13,9 @@ import { UserService } from 'src/app/services/user.service';
 export class ListsComponent implements OnInit {
   lists: List[];
   tasks: Task[];
-  //list:List;
   user;
-  user_id;
-  id;
+  // tslint:disable-next-line:variable-name
+  userId: any;
 
   constructor(
     private publicationService: PublicationService,
@@ -27,18 +26,18 @@ export class ListsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getLists(this.user_id);
+    this.getLists(this.userId);
   }
 
   refresh($event = null) {
     console.log(event);
-    this.getLists(this.user_id);
+    this.getLists(this.userId);
   }
 
   getLists(id) {
-    const user_id = this.user.id;
-    console.log(user_id);
-    this.publicationService.getLists(user_id).subscribe(
+    const userId = this.user.id;
+    console.log(userId);
+    this.publicationService.getLists(userId).subscribe(
       (res) => {
         console.log(res);
         this.lists = res.lists;
@@ -64,9 +63,9 @@ export class ListsComponent implements OnInit {
   }
 
   newTask(event) {
-    // console.log(event.target.value);
-    this.id = event.target.value;
-    localStorage.setItem('listId', this.id);
+    console.log(event.target.value);
+    event.target.id = event.target.value;
+    localStorage.setItem('listId', event.target.id);
     this.router.navigate(['/add-task']);
   }
 

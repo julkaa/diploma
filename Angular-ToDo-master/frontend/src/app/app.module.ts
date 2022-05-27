@@ -15,6 +15,16 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { ButtonComponent } from './components/button/button.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { TopNavComponent } from './components/top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +39,8 @@ import { ButtonComponent } from './components/button/button.component';
     NavBarComponent,
     TodoComponent,
     ButtonComponent,
+    NotFoundComponent,
+    TopNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +48,16 @@ import { ButtonComponent } from './components/button/button.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    DragDropModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatInputModule,
+    //
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

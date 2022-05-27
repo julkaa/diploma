@@ -14,7 +14,7 @@ export class TaskComponent implements OnInit {
   listId = JSON.parse(localStorage.getItem('listId'));
   id: string;
   task: Task = {
-    _id: '',
+    id: '',
     text: '',
     user_id: +this.identity.id,
     list_id: +this.listId,
@@ -39,7 +39,7 @@ export class TaskComponent implements OnInit {
     this.publicationService.addTask(this.task).subscribe(
       (res) => {
         console.log(res);
-        // this.router.navigate(['/listas']);
+        this.router.navigate(['/list']);
       },
       (err) => {
         console.log(err);
