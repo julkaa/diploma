@@ -3,6 +3,7 @@ import { Task } from '../../interfaces/Task';
 import { UserService } from '../../services/user.service';
 import { PublicationService } from 'src/app/services/publication.service';
 import { Router } from '@angular/router';
+import { List } from '../../interfaces/List';
 
 @Component({
   selector: 'app-task',
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class TaskComponent implements OnInit {
   identity = JSON.parse(localStorage.getItem('user'));
   listId = JSON.parse(localStorage.getItem('listId'));
+  lists: List[];
   id: string;
   task: Task = {
     id: '',
@@ -32,7 +34,9 @@ export class TaskComponent implements OnInit {
     // console.log(this.listId)
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.lists);
+  }
 
   addTask(id) {
     console.log(this.task);
