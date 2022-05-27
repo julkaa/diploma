@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class PublicationsComponent implements OnInit {
   identity = JSON.parse(localStorage.getItem('user'));
   list: List = {
-    _id: '',
+    id: '',
     title: '',
     user_id: +this.identity.id,
   };
