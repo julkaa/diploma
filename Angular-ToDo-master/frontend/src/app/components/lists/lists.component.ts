@@ -13,7 +13,6 @@ import { UserService } from 'src/app/services/user.service';
 export class ListsComponent implements OnInit {
   lists: List[];
   tasks: Task[];
-  //list:List;
   user;
   // tslint:disable-next-line:variable-name
   user_id: any;

@@ -1,7 +1,4 @@
-<app-button
-  [text]="'Back'"
-  [route]="'/'">
-</app-button>
+<app-top-nav [title]="'Wishlist'"></app-top-nav>
 <p class="user">Lists of {{user.username.toUpperCase()}}</p>
 <div class="lists">
   <div *ngFor="let list of lists" class="publication">
