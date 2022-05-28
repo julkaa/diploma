@@ -1,13 +1,6 @@
 <app-top-nav [title]="'Videos'"></app-top-nav>
-<!--<div style="margin: 120px 20px 0 20px">-->
-<!--  <div>-->
-<!--    <p></p>-->
-<!--    <iframe width="500" height="315" src="{{movie[1]}}" frameborder="0"-->
-<!--            allowfullscreen></iframe>-->
-<!--  </div>-->
-<!--</div>-->
 <div style="margin: 120px 20px 0 20px">
-  <ng-container *ngIf="!invalidStr; else errorBlock">
+  <ng-container>
     <div class="row pb-3">
       <div class="col-4 mt-4">
         <div class="card" style="width: 100%;" [@card]>
@@ -245,12 +238,5 @@
       </div>
     </div>
   </ng-container>
-  <ng-template #errorBlock>
-    <div class="card mt-5 pt-5 pb-5">
-      <div class="card-body">
-        <h3 class="text-center">{{ invalidStr }}</h3>
-      </div>
-    </div>
-  </ng-template>
 </div>
 
