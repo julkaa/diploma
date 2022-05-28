@@ -3,8 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Angular-ToDo-master.iml" filepath="$PROJECT_DIR$/.idea/Angular-ToDo-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../Web-developer/JS ADVANCED/projects angular/L16/.idea/L16.iml" filepath="$PROJECT_DIR$/../../Web-developer/JS ADVANCED/projects angular/L16/.idea/L16.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../TODO_LIST/.idea/TODO_LIST.iml" filepath="$PROJECT_DIR$/../TODO_LIST/.idea/TODO_LIST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../проги/movie-blog/.idea/movie-blog.iml" filepath="$PROJECT_DIR$/../проги/movie-blog/.idea/movie-blog.iml" />
     </modules>
   </component>
 </project>

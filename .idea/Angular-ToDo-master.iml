@@ -8,7 +8,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="TODO_LIST" />
-    <orderEntry type="module" module-name="L16" />
+    <orderEntry type="module" module-name="movie-blog" />
   </component>
 </module>

@@ -1,0 +1,256 @@
+<app-top-nav [title]="'Videos'"></app-top-nav>
+<!--<div style="margin: 120px 20px 0 20px">-->
+<!--  <div>-->
+<!--    <p></p>-->
+<!--    <iframe width="500" height="315" src="{{movie[1]}}" frameborder="0"-->
+<!--            allowfullscreen></iframe>-->
+<!--  </div>-->
+<!--</div>-->
+<div style="margin: 120px 20px 0 20px">
+  <ng-container *ngIf="!invalidStr; else errorBlock">
+    <div class="row pb-3">
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/K6rI4iL5Tto"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/TEDxTalks" target="_blank">TEDx
+              Talks</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 34.9+ Million</h6>
+            <p class="card-text text-center">From social change to social media, TED Talks cover just about everything.
+              You can find a vast range of videos about self-help on this international YouTube channel. The presenters
+              sprinkle personal anecdotes into every lesson to ground their teachings in reality.</p>
+            <p style="margin-top: 40px">Check out <a href="https://www.youtube.com/watch?v=36m1o-tM05g" target="_blank">My
+              Philosophy for a Happy
+              Life</a> or <a href="https://www.youtube.com/watch?v=w7rewjFNiys" target="_blank">The Art of Letting
+              Go</a> to get started.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/5QW6seObHZA"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/channel/UCaKZDEMDdQc8t6GzFj1_TDw/"
+                                                  target="_blank">Be Inspired</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 7.48+ Million</h6>
+            <p class="card-text text-center">The title of this channel says it all. There's a range of inspirational
+              talks, aimed to motivate you into action.</p>
+            <p style="margin-top: 112px">Check out videos like <a href="https://www.youtube.com/watch?v=9pTedcBApmU"
+                                                                  target="_blank">Never Lazy
+              Again</a>, <a href="https://www.youtube.com/watch?v=kak8PEl_v1I" target="_blank">Start Your Day Right</a>,
+              and <a href="https://www.youtube.com/watch?v=jwjGw3BCryI" target="_blank">Winner's Mindset</a> for a
+              sample of what's on offer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/znwUCNrjpD4"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/bigthink/" target="_blank">Big
+              Think</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 3.79+ Million</h6>
+            <p class="card-text text-center">Big Think is all about spreading interesting ideas from big thinkers.
+              Listen to experts like Michael Puett, Bill Nye, and Neil deGrasse Tyson give insight into ideas that
+              expand your mind and make it easy to live a better life.</p>
+            <p>Check out these videos about <a href="https://www.youtube.com/watch?v=lv2fYgBThO4" target="_blank">Build
+              Mental Models to Enhance Your Focus</a>, <a href="https://www.youtube.com/watch?v=K98sflzlRc8"
+                                                          target="_blank">Your Most Powerful Negotiation Tool: The
+              Illusion of Control</a>, <a href="https://www.youtube.com/watch?v=C3XXczbhB7g" target="_blank">Ethan
+              Hawke's Productivity Lesson: Set Simple Goals</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-3">
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/9aPZefbYRrk"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/channel/UCBIt1VN5j37PVM8LLSuTTlw/"
+                                                  target="_blank">Improvement Pill</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 2.88+ Million</h6>
+            <p class="card-text text-center">Improvement Pill releases animated lessons designed to help you improve
+              your life in all sorts of different ways. </p>
+            <p style="margin-top: 65px">You can follow a range of different <a
+              href="https://www.youtube.com/channel/UCBIt1VN5j37PVM8LLSuTTlw/playlists" target="_blank">courses written
+              by Improvement Pill</a>, or dive into one-off lessons instead.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/tG2GJZcBKOE"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/blackboxfilmcompany/"
+                                                  target="_blank">Matt D'Avella</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 3.33+ Million</h6>
+            <p class="card-text text-center">Matt D'Avella is a minimalist filmmaker. His YouTube channel is full of
+              videos to help grasp control and improve your life. As you'd expect from a filmmaker, each video is
+              beautifully shot and edited, making it a joy to watch D'Avella's work.</p>
+            <p>Check out videos like <a href="https://www.youtube.com/watch?v=km4pOGd_lHw" target="_blank">stop
+              procrastinating</a>, <a href="https://www.youtube.com/watch?v=C1TSpcnNtEs" target="_blank">make your
+              habits stick</a>, and <a href="https://www.youtube.com/watch?v=3kbdGHavGKg" target="_blank">wake up at the
+              same time every day</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/_S7VXfZZnyk"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/channel/UCf9_s9ii6BZ-klpgmtIi3WQ"
+                                                  target="_blank">Team Fearless</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 3.8+ Million</h6>
+            <p class="card-text text-center">This YouTube channel has some of the best motivational videos for getting
+              pumped.</p>
+            <p style="margin-top: 40px">Check out these videos about <a
+              href="https://www.youtube.com/watch?v=b3H4M10rxgI" target="_blank">three-minute
+              motivational bursts</a>, <a href="https://www.youtube.com/watch?v=d51n7RRsNVo" target="_blank">20-minute
+              speeches</a>, <a
+              href="https://www.makeuseof.com/tag/self-improvement-challenges-boost-mental-physical-health/">set
+              yourself self-improvement challenges</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-3">
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/q28W7N6Th58"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/schooloflifechannel/"
+                                                  target="_blank">School of Life</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 7.48+ Million</h6>
+            <p class="card-text text-center">Education shouldn't stop when you leave school. This YouTube channel
+              devotes itself to providing continued lessons on all important parts of life. Learn about relationships,
+              social philosophy, self-help, and more.</p>
+            <p>Check out these videos about <a href="https://www.youtube.com/watch?v=8_PQJNo2wME&amp;t=1s"
+                                               target="_blank">battling anxiety</a>, <a
+              href="https://www.youtube.com/watch?v=p8pzhYC7prA" target="_blank">helping people around you</a>, or <a
+              href="https://www.youtube.com/watch?v=7lECIsRif10" target="_blank">simplifying your life</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/TLKxdTmk-zc"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/viralrescue/" target="_blank">Motivation
+              Madness</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 3.04+ Million</h6>
+            <p class="card-text text-center">Motivation Madness uploads hours of inspirational speeches from successful
+              figures. </p>
+            <p style="margin-top: 40px">Many of these speeches, like <a
+              href="https://www.youtube.com/watch?v=M99NCxR0a-Q&amp;t="
+              target="_blank">Denzel Washington's life advice</a>, are from graduation
+              ceremonies. But you can take lessons from these videos wherever you are in life.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/ktlTxC4QG8g"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/phuckmediocrity" target="_blank">Fight
+              Mediocrity</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 1.78+ Million</h6>
+            <p class="card-text text-center">
+            <p>Most of us don't have time to read all the best self-improvement books out there:</p>
+            <p style="margin-top: 55px">Check out these videos about <a
+              href="https://www.youtube.com/watch?v=uqXVAo7dVRU" target="_blank">Thinking,
+              Fast and Slow</a>, <a href="https://www.youtube.com/watch?v=2hHNq45rEnU" target="_blank">Learned
+              Optimism</a>, <a href="https://www.youtube.com/watch?v=ktlTxC4QG8g" target="_blank">The 7 Habits of Highly
+              Effective People</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pb-3">
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/64wRRNWvP9g"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/channel/UCpmZQGTZXn9xd4nN59pbIWQ/"
+                                                  target="_blank">Absolute Motivation</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 1.31+ Million</h6>
+            <p>Absolute Motivation lives up to its name, providing a seemingly endless source of motivational YouTube
+              videos. There are some real gems here, like <a href="https://www.youtube.com/watch?v=nCZYBMQoml0"
+                                                             target="_blank">Psychology of the Great</a>, <a
+                href="https://www.youtube.com/watch?v=wTblbYqQQag" target="_blank">What It All Means</a>, and <a
+                href="https://www.youtube.com/watch?v=p0p1fjLPjYQ" target="_blank">Why You're Not Happy</a>.</p>
+            <p style="margin-top: 40px">Do yourself a favor and think about the message after each video. If you need
+              motivation in ten minutes
+              or less, this one of the best YouTube channels around.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/jznqs9julUY"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/etthehiphoppreacher"
+                                                  target="_blank">ET the Hip Hop Preacher</a></h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 1.33+ Million</h6>
+            <p class="card-text text-center">Eric Thomas is a motivational speaker, educator, preacher, podcaster, and
+              entrepreneur. His motivational YouTube videos can help you develop the mindset you need for effective
+              self-help..</p>
+            <p>If you don't mind Thomas's faith-inspired perspective on personal development, this channel is a great
+              resource. Particularly popular videos include <a href="https://www.youtube.com/watch?v=7Oxz060iedY"
+                                                               target="_blank">You Owe You</a> or <a
+                href="https://www.youtube.com/watch?v=7KdX59e2wbs" target="_blank">Affirm Your Goals</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 mt-4">
+        <div class="card" style="width: 100%;" [@card]>
+          <iframe class="card-img-top" width="475" height="315"
+                  src="https://www.youtube.com/embed/6vVIbPdfjxg"
+                  frameborder="0" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title text-center"><a href="https://www.youtube.com/user/ActualizedOrg/" target="_blank">Actualized.org</a>
+            </h5>
+            <h6 class="card-text text-center">Total Number of Subscribers: 1.09+ Million</h6>
+            <p>Many of the videos from Actualized.org are nearly an hour long, like <a
+              href="https://www.youtube.com/watch?v=ayEoiU5MOg4" target="_blank">One Simple Rule for Acing Life</a>, <a
+              href="https://www.youtube.com/watch?v=XR7mjtoAdpM" target="_blank">Lifestyle Minimalism</a>, and <a
+              href="https://www.youtube.com/watch?v=AlB6OklejyA" target="_blank">The Power of Letting Go</a>. You may
+              want to split them up into shorter sections, but they're worth making time for.</p>
+            <p>This YouTube channel seeks to help you master your psychology and improve your life. It covers a wide
+              variety of personal development concepts (with a dose of profanity thrown in for good measure).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #errorBlock>
+    <div class="card mt-5 pt-5 pb-5">
+      <div class="card-body">
+        <h3 class="text-center">{{ invalidStr }}</h3>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
