@@ -1,0 +1,581 @@
+{
+  "movies": [
+    {
+      "Title": "The Simpsons Movie",
+      "Year": "2007",
+      "Rated": "PG-13",
+      "Released": "27 Jul 2007",
+      "Runtime": "87 min",
+      "Genre": "Animation, Adventure, Comedy",
+      "Director": "David Silverman",
+      "Writer": "James L. Brooks (screenplay), Matt Groening (screenplay), Al Jean (screenplay), Ian Maxtone-Graham (screenplay), George Meyer (screenplay), David Mirkin (screenplay), Mike Reiss (screenplay), Mike Scully (screenplay), Matt Selman (screenplay), John Swartzwelder (screenplay), Jon Vitti (screenplay), Joel H. Cohen (consultant writer), John Frink (consultant writer), Tim Long (consultant writer), Michael Price (consultant writer)",
+      "Actors": "Dan Castellaneta, Julie Kavner, Nancy Cartwright, Yeardley Smith",
+      "Plot": "After Homer pollutes the town's water supply, Springfield is encased in a gigantic dome by the EPA and the Simpsons are declared fugitives.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "Nominated for 1 Golden Globe. Another 5 wins & 33 nominations.",
+      "Poster": "'https://www.youtube.com/embed/1ozGKlOzEVc'",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.3/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "88%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "80/100"
+        }
+      ],
+      "Metascore": "80",
+      "imdbRating": "7.3",
+      "imdbVotes": "304,924",
+      "imdbID": "tt0462538",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Gracie Films",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 1,
+      "dateOfBroadcast": "2020-12-13T18:30:00.000Z",
+      "endOfBroadcast": "2020-12-13T19:57:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "Batman v Superman: Dawn of Justice",
+      "Year": "2016",
+      "Rated": "PG-13",
+      "Released": "25 Mar 2016",
+      "Runtime": "152 min",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Director": "Zack Snyder",
+      "Writer": "Chris Terrio, David S. Goyer, Bob Kane (Batman created by), Bill Finger (Batman created by), Jerry Siegel (Superman created by), Joe Shuster (Superman created by), William Moulton Marston (character created by: Wonder Woman)",
+      "Actors": "Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg",
+      "Plot": "Fearing that the actions of Superman are left unchecked, Batman takes on the Man of Steel, while the world wrestles with what kind of a hero it really needs.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "14 wins & 33 nominations.",
+      "Poster": "https://www.youtube.com/embed/1ozGKlOzEVc",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "28%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "44/100"
+        }
+      ],
+      "Metascore": "44",
+      "imdbRating": "6.4",
+      "imdbVotes": "611,766",
+      "imdbID": "tt2975590",
+      "Type": "movie",
+      "DVD": "19 Jul 2016",
+      "BoxOffice": "$293,792,936",
+      "Production": "Warner Bros. Pictures",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 2,
+      "dateOfBroadcast": "2020-11-04T21:00:00.000Z",
+      "endOfBroadcast": "2020-11-04T23:32:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "Superman IV: The Quest for Peace",
+      "Year": "1987",
+      "Rated": "PG",
+      "Released": "24 Jul 1987",
+      "Runtime": "90 min",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Director": "Sidney J. Furie",
+      "Writer": "Jerry Siegel (character created by: Superman), Joe Shuster (character created by: Superman), Christopher Reeve (story by), Lawrence Konner (story by), Mark Rosenthal (story by), Lawrence Konner (screenplay by), Mark Rosenthal (screenplay by)",
+      "Actors": "Christopher Reeve, Gene Hackman, Jackie Cooper, Marc McClure",
+      "Plot": "The Man of Steel crusades for nuclear disarmament and meets Lex Luthor's latest creation, Nuclear Man.",
+      "Language": "English, Russian, French, Italian",
+      "Country": "UK, USA",
+      "Awards": "2 wins & 6 nominations.",
+      "Poster": "https://www.youtube.com/embed/1ozGKlOzEVc",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "3.7/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "11%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "24/100"
+        }
+      ],
+      "Metascore": "24",
+      "imdbRating": "3.7",
+      "imdbVotes": "42,194",
+      "imdbID": "tt0094074",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Cannon Films, Warner Bros.",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 3,
+      "dateOfBroadcast": "2020-09-27T05:30:00.000Z",
+      "endOfBroadcast": "2020-09-27T07:00:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "Gotham",
+      "Year": "2014–2019",
+      "Rated": "TV-14",
+      "Released": "22 Sep 2014",
+      "Runtime": "42 min",
+      "Genre": "Action, Crime, Drama, Mystery, Sci-Fi, Thriller",
+      "Director": "N/A",
+      "Writer": "Bruno Heller",
+      "Actors": "Ben McKenzie, Donal Logue, David Mazouz, Sean Pertwee",
+      "Plot": "The story behind Detective James Gordon's rise to prominence in Gotham City in the years before Batman's arrival.",
+      "Language": "English, Russian, Italian, French",
+      "Country": "USA",
+      "Awards": "Won 1 Primetime Emmy. Another 5 wins & 44 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTU5NjQ2MTU4NV5BMl5BanBnXkFtZTgwOTYyNTAwNzM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.9/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "7.9",
+      "imdbVotes": "190,942",
+      "imdbID": "tt3749900",
+      "Type": "series",
+      "totalSeasons": "5",
+      "Response": "True",
+      "id": 4,
+      "dateOfBroadcast": "2020-09-30T10:30:00.000Z",
+      "endOfBroadcast": "2020-09-30T11:12:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "Superman Returns",
+      "Year": "2006",
+      "Rated": "PG-13",
+      "Released": "28 Jun 2006",
+      "Runtime": "154 min",
+      "Genre": "Action, Sci-Fi",
+      "Director": "Bryan Singer",
+      "Writer": "Michael Dougherty (screenplay), Dan Harris (screenplay), Bryan Singer (story), Michael Dougherty (story), Dan Harris (story), Jerry Siegel (characters), Joe Shuster (characters)",
+      "Actors": "Brandon Routh, Kate Bosworth, Kevin Spacey, James Marsden",
+      "Plot": "Superman returns to Earth after spending five years in space examining his homeworld Krypton. But he finds things have changed while he was gone, and he must once again prove himself important to the world.",
+      "Language": "English, German, French",
+      "Country": "USA",
+      "Awards": "Nominated for 1 Oscar. Another 12 wins & 41 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.0/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "75%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "72/100"
+        }
+      ],
+      "Metascore": "72",
+      "imdbRating": "6.0",
+      "imdbVotes": "268,423",
+      "imdbID": "tt0348150",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Warner Bros.",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 5,
+      "dateOfBroadcast": "2020-10-15T14:30:00.000Z",
+      "endOfBroadcast": "2020-10-15T17:04:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "Some Kind of Wonderful",
+      "Year": "1987",
+      "Rated": "PG-13",
+      "Released": "27 Feb 1987",
+      "Runtime": "95 min",
+      "Genre": "Drama, Romance",
+      "Director": "Howard Deutch",
+      "Writer": "John Hughes",
+      "Actors": "Eric Stoltz, Mary Stuart Masterson, Lea Thompson, Craig Sheffer",
+      "Plot": "When Keith goes out with Amanda, the girl of his dreams, Amanda's ex-boyfriend plans to get back at Keith. Meanwhile, Keith's best friend, tomboy Watts, realizes she has feelings for Keith.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "1 win.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTg2NmQxNzEtNmUyYi00MGQyLTkwZmYtOTU2MWM5ZmY1OTRmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "7.1/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "78%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "55/100"
+        }
+      ],
+      "Metascore": "55",
+      "imdbRating": "7.1",
+      "imdbVotes": "27,084",
+      "imdbID": "tt0094006",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Paramount Pictures",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 6,
+      "dateOfBroadcast": "2020-09-20T10:30:00.000Z",
+      "endOfBroadcast": "2020-09-20T12:05:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "The Dark Knight",
+      "Year": "2008",
+      "Rated": "PG-13",
+      "Released": "18 Jul 2008",
+      "Runtime": "152 min",
+      "Genre": "Action, Crime, Drama, Thriller",
+      "Director": "Christopher Nolan",
+      "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+      "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine",
+      "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "Language": "English, Mandarin",
+      "Country": "USA, UK",
+      "Awards": "Won 2 Oscars. Another 153 wins & 160 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "9.0/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "94%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "84/100"
+        }
+      ],
+      "Metascore": "84",
+      "imdbRating": "9.0",
+      "imdbVotes": "2,245,394",
+      "imdbID": "tt0468569",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Syncopy",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 7,
+      "dateOfBroadcast": "2020-09-27T18:30:00.000Z",
+      "endOfBroadcast": "2020-09-27T21:02:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "Thor: The Dark World",
+      "Year": "2013",
+      "Rated": "PG-13",
+      "Released": "08 Nov 2013",
+      "Runtime": "112 min",
+      "Genre": "Action, Adventure, Fantasy",
+      "Director": "Alan Taylor",
+      "Writer": "Christopher L. Yost (screenplay by), Christopher Markus (screenplay by), Stephen McFeely (screenplay by), Don Payne (story by), Robert Rodat (story by), Stan Lee (based on the Marvel comics by), Larry Lieber (based on the Marvel comics by), Jack Kirby (based on the Marvel comics by), Walter Simonson (character created by: Malekith)",
+      "Actors": "Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins",
+      "Plot": "When the Dark Elves attempt to plunge the universe into darkness, Thor must embark on a perilous and personal journey that will reunite him with doctor Jane Foster.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "3 wins & 21 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.9/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "66%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "54/100"
+        }
+      ],
+      "Metascore": "54",
+      "imdbRating": "6.9",
+      "imdbVotes": "582,650",
+      "imdbID": "tt1981115",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Marvel Studios",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 8
+    },
+    {
+      "Title": "Transformers: Dark of the Moon",
+      "Year": "2011",
+      "Rated": "PG-13",
+      "Released": "29 Jun 2011",
+      "Runtime": "154 min",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Director": "Michael Bay",
+      "Writer": "Ehren Kruger",
+      "Actors": "Shia LaBeouf, Rosie Huntington-Whiteley, Josh Duhamel, John Turturro",
+      "Plot": "The Autobots learn of a Cybertronian spacecraft hidden on the moon, and race against the Decepticons to reach it and to learn its secrets.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "Nominated for 3 Oscars. Another 10 wins & 39 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTkwOTY0MTc1NV5BMl5BanBnXkFtZTcwMDQwNjA2NQ@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "6.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "35%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "42/100"
+        }
+      ],
+      "Metascore": "42",
+      "imdbRating": "6.2",
+      "imdbVotes": "380,097",
+      "imdbID": "tt1399103",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Di Bonaventura Pictures, Ian Bryce, Don Murphy/Tom DeSanto",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 9,
+      "dateOfBroadcast": "2020-09-30T14:30:00.000Z",
+      "endOfBroadcast": "2020-09-30T17:04:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "The Dark Knight Rises",
+      "Year": "2012",
+      "Rated": "PG-13",
+      "Released": "20 Jul 2012",
+      "Runtime": "164 min",
+      "Genre": "Action, Adventure",
+      "Director": "Christopher Nolan",
+      "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)",
+      "Actors": "Christian Bale, Gary Oldman, Tom Hardy, Joseph Gordon-Levitt",
+      "Plot": "Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.",
+      "Language": "English, Arabic",
+      "Country": "UK, USA",
+      "Awards": "Nominated for 1 BAFTA Film Award. Another 38 wins & 101 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "87%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "78/100"
+        }
+      ],
+      "Metascore": "78",
+      "imdbRating": "8.4",
+      "imdbVotes": "1,480,138",
+      "imdbID": "tt1345836",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Syncopy",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 10
+    },
+    {
+      "Title": "Dark",
+      "Year": "2017–2020",
+      "Rated": "TV-MA",
+      "Released": "01 Dec 2017",
+      "Runtime": "60 min",
+      "Genre": "Crime, Drama, Mystery, Sci-Fi, Thriller",
+      "Director": "N/A",
+      "Writer": "Baran bo Odar, Jantje Friese",
+      "Actors": "Louis Hofmann, Karoline Eichhorn, Lisa Vicari, Maja Schöne",
+      "Plot": "A family saga with a supernatural twist, set in a German town, where the disappearance of two young children exposes the relationships among four families.",
+      "Language": "German",
+      "Country": "Germany, USA",
+      "Awards": "5 wins & 19 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BZmY2YzU4NDktODIxYi00YWIyLWIzYTctODBkYzYzZjc0ODdlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.8/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "8.8",
+      "imdbVotes": "245,709",
+      "imdbID": "tt5753856",
+      "Type": "series",
+      "totalSeasons": "3",
+      "Response": "True",
+      "id": 11
+    },
+    {
+      "Title": "Batman Begins",
+      "Year": "2005",
+      "Rated": "PG-13",
+      "Released": "15 Jun 2005",
+      "Runtime": "140 min",
+      "Genre": "Action, Adventure",
+      "Director": "Christopher Nolan",
+      "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)",
+      "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes",
+      "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
+      "Language": "English, Mandarin",
+      "Country": "USA, UK",
+      "Awards": "Nominated for 1 Oscar. Another 14 wins & 72 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.2/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "84%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "70/100"
+        }
+      ],
+      "Metascore": "70",
+      "imdbRating": "8.2",
+      "imdbVotes": "1,277,260",
+      "imdbID": "tt0372784",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Warner Brothers, Di Bonaventura Pictures",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 12
+    },
+    {
+      "Title": "Batman: The Animated Series",
+      "Year": "1992–1995",
+      "Rated": "TV-PG",
+      "Released": "05 Sep 1992",
+      "Runtime": "23 min",
+      "Genre": "Animation, Action, Adventure, Family, Sci-Fi",
+      "Director": "N/A",
+      "Writer": "Bob Kane, Eric Radomski, Bruce Timm, Paul Dini, Bill Finger",
+      "Actors": "Kevin Conroy, Efrem Zimbalist Jr., Bob Hastings",
+      "Plot": "The Dark Knight battles crime in Gotham City with occasional help from Robin and Batgirl.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "Won 1 Primetime Emmy. Another 4 wins & 19 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "9.0/10"
+        }
+      ],
+      "Metascore": "N/A",
+      "imdbRating": "9.0",
+      "imdbVotes": "85,316",
+      "imdbID": "tt0103359",
+      "Type": "series",
+      "totalSeasons": "4",
+      "Response": "True",
+      "id": 13,
+      "dateOfBroadcast": "2020-12-30T14:30:00.000Z",
+      "endOfBroadcast": "2020-12-30T14:53:00.000Z",
+      "run": true
+    },
+    {
+      "Title": "Avengers: Infinity War",
+      "Year": "2018",
+      "Rated": "PG-13",
+      "Released": "27 Apr 2018",
+      "Runtime": "149 min",
+      "Genre": "Action, Adventure, Sci-Fi",
+      "Director": "Anthony Russo, Joe Russo",
+      "Writer": "Christopher Markus (screenplay by), Stephen McFeely (screenplay by), Stan Lee (based on the Marvel comics by), Jack Kirby (based on the Marvel comics by), Joe Simon (Captain America created by), Jack Kirby (Captain America created by), Steve Englehart (Star-Lord created by), Steve Gan (Star-Lord created by), Bill Mantlo (Rocket Raccoon created by), Keith Giffen (Rocket Raccoon created by), Jim Starlin (Thanos,  Gamora and Drax created by), Stan Lee (Groot created by), Larry Lieber (Groot created by), Jack Kirby (Groot created by), Steve Englehart (Mantis created by), Don Heck (Mantis created by)",
+      "Actors": "Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans",
+      "Plot": "The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.",
+      "Language": "English",
+      "Country": "USA",
+      "Awards": "Nominated for 1 Oscar. Another 46 wins & 75 nominations.",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
+      "Ratings": [
+        {
+          "Source": "Internet Movie Database",
+          "Value": "8.4/10"
+        },
+        {
+          "Source": "Rotten Tomatoes",
+          "Value": "85%"
+        },
+        {
+          "Source": "Metacritic",
+          "Value": "68/100"
+        }
+      ],
+      "Metascore": "68",
+      "imdbRating": "8.4",
+      "imdbVotes": "812,007",
+      "imdbID": "tt4154756",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "N/A",
+      "Production": "Marvel Studios",
+      "Website": "N/A",
+      "Response": "True",
+      "id": 14,
+      "dateOfBroadcast": "2021-01-15T11:36:00.000Z",
+      "endOfBroadcast": "2021-01-15T14:05:00.000Z",
+      "run": true
+    },
+    {
+      "Response": "False",
+      "Error": "Incorrect IMDb ID.",
+      "id": 15
+    }
+  ],
+  "seances": []
+}

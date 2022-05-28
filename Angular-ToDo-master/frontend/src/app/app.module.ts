@@ -27,6 +27,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
+import { YoutubePageComponent } from './components/youtube-page/youtube-page.component';
+import { VideoComponent } from './components/video/video.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { MatSelectModule } from '@angular/material/select';
     ButtonComponent,
     NotFoundComponent,
     TopNavComponent,
+    YoutubePageComponent,
+    VideoComponent,
   ],
   imports: [
     BrowserModule,

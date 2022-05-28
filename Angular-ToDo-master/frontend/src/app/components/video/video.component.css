@@ -1,0 +1,8 @@
+a {
+  text-decoration: none;
+  color: #c5a84e;
+}
+
+.d-flex a {
+  color: black;
+}
