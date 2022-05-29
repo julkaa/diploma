@@ -2,64 +2,58 @@
   text-align: center;
 }
 
-.lists {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 3rem 2rem;
+.list-wrapper {
   width: 50%;
   float: left;
   margin: 120px 20px 0 20px;
 }
 
-.publication {
-  border: solid .05rem rgb(216, 86, 93);
-  margin: 2rem 2rem;
+mat-list-item {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px 0 #e7e7e7;
+  -moz-box-shadow: 0 0 10px 0 #e7e7e7;
+  box-shadow: 0 0 10px 0 #e7e7e7;
 }
 
-.list-title {
-  background-color: rgb(216, 86, 93);
-  color: white;
-  text-align: center;
-  padding: .5rem .5rem;
-  margin-top: 0;
-}
-
-.one-list button {
-  all: unset;
-  margin: 1rem;
-}
-
-.one-list .add-btn {
+.add-btn {
   background-color: rgb(76, 161, 76);
   color: white;
   padding: .2rem .5rem;
+  border: 1px solid white;
+  border-radius: 7px;
+
+  &:hover {
+    transition: .3s;
+    cursor: pointer;
+    background-color: rgb(27, 105, 27);
+  }
 }
 
-.one-list .add-btn:hover {
-  transition: .3s;
-  cursor: pointer;
-  background-color: rgb(27, 105, 27);
-}
-
-.one-list .delete-btn {
+.delete-btn {
   background-color: rgb(216, 86, 93);
   color: white;
   padding: .2rem .5rem;
+  border: 1px solid white;
+  border-radius: 7px;
+
+
+  &:hover {
+    transition: .3s;
+    cursor: pointer;
+    background-color: rgb(207, 20, 29);
+  }
 }
 
-.one-list .delete-btn:hover {
-  transition: .3s;
-  cursor: pointer;
-  background-color: rgb(207, 20, 29);
+mat-label {
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.task {
-  border: solid .05rem rgb(216, 86, 93);
-  margin: 0 .4rem .5rem .4rem;
-}
-
-.task-title {
-  padding: .2rem .4rem;
+hr {
+  opacity: 0.2;
+  border-top: 0.5px solid black;
+  margin: 30px 0 10px -10px;
+  width: 103%;
 }
 
 //////

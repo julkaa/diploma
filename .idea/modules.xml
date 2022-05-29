@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Angular-ToDo-master.iml" filepath="$PROJECT_DIR$/.idea/Angular-ToDo-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../проги/jira-clone-angular-master/.idea/jira-clone-angular-master.iml" filepath="$PROJECT_DIR$/../проги/jira-clone-angular-master/.idea/jira-clone-angular-master.iml" />
     </modules>
   </component>
 </project>

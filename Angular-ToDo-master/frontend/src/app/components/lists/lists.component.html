@@ -1,23 +1,37 @@
 <app-top-nav [title]="'Wishlist'"></app-top-nav>
 <!--<p class="user">Lists of {{user.username.toUpperCase()}}</p>-->
-<div class="lists">
-  <div *ngFor="let list of lists" class="publication">
-    <div class="one-list">
-      <p class="list-title">{{list.title}}</p>
-      <button routerLink="/task" (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
-      <!--      <button routerLink="/task" (click)="newTask(list.id)" class="add-btn">Add Task</button>-->
-      <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>
-      <div *ngFor="let task of tasks">
-        <div class="task" *ngIf="task.list_id == list.id">
-          <p class="task-title">{{task.text}}</p>
-          <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>
-          <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>
-        </div>
-      </div>
+<!--<div class="lists">-->
+<!--  <div *ngFor="let list of lists" class="publication">-->
+<!--    <div class="one-list">-->
+<!--      <p class="list-title">{{list.title}}</p>-->
+<!--      <button routerLink="/task" (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>-->
+<!--      &lt;!&ndash;      <button routerLink="/task" (click)="newTask(list.id)" class="add-btn">Add Task</button>&ndash;&gt;-->
+<!--      <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>-->
+<!--      <div *ngFor="let task of tasks">-->
+<!--        <div class="task" *ngIf="task.list_id == list.id">-->
+<!--          <p class="task-title">{{task.text}}</p>-->
+<!--          <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>-->
+<!--          <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>-->
+<!--        </div>-->
+<!--      </div>-->
 
-    </div>
-  </div>
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<div class="list-wrapper">
+  <mat-list *ngFor="let list of lists">
+    <mat-label>{{list.title}}</mat-label>
+    <button routerLink="/task" (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
+    <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>
+    <mat-list-item *ngFor="let task of tasks">{{task.text}}
+      <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>
+      <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>
+    </mat-list-item>
+    <hr>
+  </mat-list>
+
 </div>
+
 <div class="sizer-wrap" (click)="toggle()" [style.width.px]="sidebarWidth">
   <div class="right-nav" [style.width.px]="sidebarWidth">
     <p>navbar</p>
