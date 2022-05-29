@@ -10,12 +10,17 @@ import { TodoComponent } from './components/todo/todo.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { VideoComponent } from './components/video/video.component';
+import { PostComponent } from './components/post/post.component';
 
 const routes: Routes = [
   { path: '', component: NavBarComponent },
   {
     path: 'todo',
     component: TodoComponent,
+  },
+  {
+    path: 'post',
+    component: PostComponent,
   },
   {
     path: 'video',
