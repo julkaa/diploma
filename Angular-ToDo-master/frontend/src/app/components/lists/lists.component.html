@@ -1,6 +1,6 @@
 <app-top-nav [title]="'Wishlist'"></app-top-nav>
 <!--<p class="user">Lists of {{user.username.toUpperCase()}}</p>-->
-<div class="lists" style="margin-top: 100px">
+<div class="lists">
   <div *ngFor="let list of lists" class="publication">
     <div class="one-list">
       <p class="list-title">{{list.title}}</p>
@@ -17,5 +17,22 @@
 
     </div>
   </div>
+</div>
+<div class="sizer-wrap" (click)="toggle()" [style.width.px]="sidebarWidth">
+  <div class="right-nav" [style.width.px]="sidebarWidth">
+    <p>navbar</p>
+  </div>
+  <div class="strip"></div>
+  <div class="sizer">
+    <div class="line"></div>
+  </div>
+  <button class="btn">
+    <div class="overlay">
+      <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>
+      <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>
+    </div>
+    <span class="cursor-pointer fill-current text-white flex-shrink-0 leading-none"></span>
+  </button>
+
 </div>
 <router-outlet></router-outlet>

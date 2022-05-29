@@ -8,7 +8,7 @@ import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'app-lists',
   templateUrl: './lists.component.html',
-  styleUrls: ['./lists.component.css'],
+  styleUrls: ['./lists.component.scss'],
 })
 export class ListsComponent implements OnInit {
   lists: List[];
@@ -16,6 +16,8 @@ export class ListsComponent implements OnInit {
   user;
   // tslint:disable-next-line:variable-name
   userId: any;
+  expanded = false;
+  manualToggle;
 
   constructor(
     private publicationService: PublicationService,
@@ -27,6 +29,14 @@ export class ListsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLists(this.userId);
+  }
+
+  get sidebarWidth(): number {
+    return this.expanded ? 240 : 15;
+  }
+
+  toggle() {
+    this.expanded = !this.expanded;
   }
 
   refresh($event = null) {
