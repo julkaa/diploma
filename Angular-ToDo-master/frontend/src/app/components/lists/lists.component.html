@@ -20,7 +20,7 @@
 <!--</div>-->
 <div class="list-wrapper">
   <mat-list *ngFor="let list of lists">
-    <mat-label>{{list.title}}</mat-label>
+    <mat-label routerLink="/todo">{{list.title}}</mat-label>
     <button routerLink="/task" (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
     <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>
     <mat-list-item *ngFor="let task of tasks">{{task.text}}

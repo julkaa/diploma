@@ -20,7 +20,8 @@ export class TaskComponent implements OnInit {
     text: '',
     user_id: +this.identity.id,
     list_id: +this.listId,
-    created_at: '',
+    inprogress: false,
+    done: false,
   };
 
   constructor(

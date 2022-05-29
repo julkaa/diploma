@@ -3,5 +3,6 @@ export interface Task {
   text: string;
   user_id: number;
   list_id: number;
-  created_at: string;
+  inprogress: boolean;
+  done: boolean;
 }

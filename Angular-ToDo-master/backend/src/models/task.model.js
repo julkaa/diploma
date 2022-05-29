@@ -15,6 +15,11 @@ module.exports = (sequelize, Sequelize) => {
       list_id: {
         type: Sequelize.INTEGER,
       },
+      inprogress: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false,
+        defaultValue: false,
+      },
       done: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
