@@ -1,2 +1,17 @@
 <app-top-nav [title]="'Profile'"></app-top-nav>
+<div class="wrapper" style="margin-top: 120px">
+  <img *ngIf="user.gender.toLowerCase() == 'male'" src="https://cdn-icons-png.flaticon.com/512/634/634788.png"
+       alt="avatar">
+  <img *ngIf="user.gender.toLowerCase() == 'female'" src="https://cdn-icons-png.flaticon.com/512/634/634761.png"
+       alt="avatar">
+  <div></div>
+  <mat-list>
+    <mat-list-item><span style="margin: auto">{{user.username}}</span></mat-list-item>
+    <mat-list-item><span class="material-icons">person</span> {{user.firstName}} {{user.lastName}}</mat-list-item>
+    <mat-list-item><span class="material-icons">{{user.gender.toLowerCase()}}</span> {{user.gender}}</mat-list-item>
+    <mat-list-item><span class="material-icons">email</span> {{user.email}}</mat-list-item>
+    <mat-list-item><span class="material-icons">cake</span> {{user.date}}</mat-list-item>
+  </mat-list>
+
+</div>
 <router-outlet></router-outlet>

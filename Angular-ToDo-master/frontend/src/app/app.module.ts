@@ -29,6 +29,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { YoutubePageComponent } from './components/youtube-page/youtube-page.component';
 import { VideoComponent } from './components/video/video.component';
+import { InfiniteTypeDeleteModule } from 'ngx-sbz-type-delete';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,8 @@ import { VideoComponent } from './components/video/video.component';
     MatButtonModule,
     MatOptionModule,
     MatSelectModule,
+    InfiniteTypeDeleteModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

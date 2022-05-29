@@ -1,0 +1,38 @@
+.main {
+  width: 400px;
+  height: auto;
+  margin: 3% auto;
+}
+
+input, button {
+  width: 100%;
+  height: 35px;
+  border: .5px solid gray;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
+.loginBtn {
+  background-color: #9142f6;
+  height: 25px;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.returnBtn {
+  color: #9142f6;
+  background-color: white;
+  border: 0px;
+}
+
+.is-invalid {
+  border: 1px solid red;
+  background-color: pink;
+}
+
+.error {
+  color: red;
+  font-size: .8em;
+}
