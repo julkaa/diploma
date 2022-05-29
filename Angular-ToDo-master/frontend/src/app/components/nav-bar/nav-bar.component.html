@@ -2,11 +2,11 @@
   <nav>
     <ul>
       <ng-container *ngIf="!userService.loggedIn(); else loggedIn">
-        <li>
-          <a routerLink="/registration">Check in</a>
+        <li style="margin-top: -350px">
+          <span routerLink="/registration"><span class="material-icons">how_to_reg</span>Check in</span>
         </li>
-        <li>
-          <a routerLink="/login">Log in</a>
+        <li style="margin-top: -350px">
+          <span routerLink="/login"><span class="material-icons">login</span>Log In</span>
         </li>
       </ng-container>
       <ng-template #loggedIn>
@@ -17,11 +17,11 @@
           <span routerLink="/profile"><span class="material-icons">person</span>Profile</span>
         </li>
         <li>
+          <span routerLink="/post"><span class="material-icons">article</span>Posts</span>
+        </li>
+        <li>
           <span routerLink="/video"><span class="material-icons">group</span>Videos</span>
         </li>
-        <!--      <li>-->
-        <!--        <span routerLink="/todo-list"><span class="material-icons">add_task</span>Todos</span>-->
-        <!--      </li>-->
         <li>
           <span routerLink="/todo"><span class="material-icons">add_task</span>ToDo</span>
         </li>
@@ -34,23 +34,8 @@
         <li>
           <span routerLink="/task"><span class="material-icons">bookmarks</span>Add Task</span>
         </li>
-        <!--      <li>-->
-        <!--        <span (click)="logOut()"><span class="material-icons">login</span>Log out</span>-->
-        <!--      </li>-->
         <li>
-          <span routerLink="/login"><span class="material-icons">login</span>Log In</span>
-        </li>
-        <li>
-          <a routerLink="/add-list">Add List</a>
-        </li>
-        <!--        <li>-->
-        <!--          <a routerLink="/list">Lists</a>-->
-        <!--        </li>-->
-        <li>
-          <a routerLink="/task">Add Task</a>
-        </li>
-        <li>
-          <a routerLink="/login" (click)="userService.logOut()">Log off</a>
+          <span (click)="userService.logOut()"><span class="material-icons">logout</span>Log Off</span>
         </li>
       </ng-template>
     </ul>

@@ -9,6 +9,10 @@ exports.signup = (req, res) => {
   // Save User to Database
   User.create({
     username: req.body.username,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    gender: req.body.gender,
+    date: req.body.date,
     email: req.body.email,
     password: bcrypt.hashSync(req.body.password, 8),
   })
@@ -36,13 +40,11 @@ exports.signin = (req, res) => {
         user.password
       );
       if (!passwordIsValid) {
-        return res
-          .status(401)
-          .send({
-            auth: false,
-            accessToken: null,
-            reason: "Invalid Password!",
-          });
+        return res.status(401).send({
+          auth: false,
+          accessToken: null,
+          reason: "Invalid Password!",
+        });
       }
 
       const token = jwt.sign(

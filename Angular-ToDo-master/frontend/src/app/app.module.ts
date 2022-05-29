@@ -27,8 +27,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { MatOptionModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
-import { YoutubePageComponent } from './components/youtube-page/youtube-page.component';
+import { PostComponent } from './components/post/post.component';
 import { VideoComponent } from './components/video/video.component';
+import { InfiniteTypeDeleteModule } from 'ngx-sbz-type-delete';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,7 @@ import { VideoComponent } from './components/video/video.component';
     ButtonComponent,
     NotFoundComponent,
     TopNavComponent,
-    YoutubePageComponent,
+    PostComponent,
     VideoComponent,
   ],
   imports: [
@@ -66,6 +68,8 @@ import { VideoComponent } from './components/video/video.component';
     MatButtonModule,
     MatOptionModule,
     MatSelectModule,
+    InfiniteTypeDeleteModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

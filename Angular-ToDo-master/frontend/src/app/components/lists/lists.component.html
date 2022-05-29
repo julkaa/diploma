@@ -4,11 +4,11 @@
   <div *ngFor="let list of lists" class="publication">
     <div class="one-list">
       <p class="list-title">{{list.title}}</p>
-      <button routerLink="/task" (click)="newTask(list.id)" value="{{list.id}}" class="add-btn">Add Task</button>
+      <button routerLink="/task" (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
       <!--      <button routerLink="/task" (click)="newTask(list.id)" class="add-btn">Add Task</button>-->
       <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>
       <div *ngFor="let task of tasks">
-        <div class="task">
+        <div class="task" *ngIf="task.list_id == list.id">
           <p class="task-title">{{task.text}}</p>
           <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>
           <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>

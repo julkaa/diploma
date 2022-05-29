@@ -1,0 +1,22 @@
+.wrapper {
+  width: 25%;
+  margin: auto;
+
+  img {
+    width: 100px;
+    height: 100px;
+    margin-left: 37%;
+    margin-bottom: 20px;
+  }
+}
+
+mat-list-item {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px 0 #e7e7e7;
+  -moz-box-shadow: 0 0 10px 0 #e7e7e7;
+  box-shadow: 0 0 10px 0 #e7e7e7;
+
+  span {
+    margin-right: 30px;
+  }
+}

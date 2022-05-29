@@ -63,10 +63,11 @@ export class ListsComponent implements OnInit {
   }
 
   newTask(event) {
-    console.log(event.target.value);
+    console.log(event);
     event.target.id = event.target.value;
-    localStorage.setItem('listId', event.target.id);
-    this.router.navigate(['/add-task']);
+    console.log(event.target.id);
+    localStorage.setItem('listId', event.target.id.toString());
+    this.router.navigate(['/task']);
   }
 
   deleteTask(id) {

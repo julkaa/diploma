@@ -1,9 +1,21 @@
-<div>
-  <div class="login-form">
-    <form (submit)="login()">
-      <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email" required>
-      <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" required>
-      <button type="submit">Log in</button>
-    </form>
+<div class="main">
+  <div style="margin-left: 30%; color: #373738; font-weight: bold">
+    <ngx-sbz-type-delete [wordArray]="['Welcome Back...']"
+                         [typingSpeedMilliseconds]="300" [deleteSpeedMilliseconds]="300"
+                         fontSize="20px"></ngx-sbz-type-delete>
   </div>
+  <form (submit)="login()">
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" name="email" [(ngModel)]="user.email" required>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" name="password" [(ngModel)]="user.password" required>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="loginBtn" value="Login">
+    </div>
+    <input routerLink="/" type="button" class="returnBtn" value="Cancel and return to website">
+  </form>
 </div>

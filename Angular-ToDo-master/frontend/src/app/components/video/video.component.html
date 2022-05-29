@@ -1,13 +1,6 @@
 <app-top-nav [title]="'Videos'"></app-top-nav>
-<!--<div style="margin: 120px 20px 0 20px">-->
-<!--  <div>-->
-<!--    <p></p>-->
-<!--    <iframe width="500" height="315" src="{{movie[1]}}" frameborder="0"-->
-<!--            allowfullscreen></iframe>-->
-<!--  </div>-->
-<!--</div>-->
 <div style="margin: 120px 20px 0 20px">
-  <ng-container *ngIf="!invalidStr; else errorBlock">
+  <ng-container>
     <div class="row pb-3">
       <div class="col-4 mt-4">
         <div class="card" style="width: 100%;" [@card]>
@@ -21,7 +14,7 @@
             <p class="card-text text-center">From social change to social media, TED Talks cover just about everything.
               You can find a vast range of videos about self-help on this international YouTube channel. The presenters
               sprinkle personal anecdotes into every lesson to ground their teachings in reality.</p>
-            <p style="margin-top: 40px">Check out <a href="https://www.youtube.com/watch?v=36m1o-tM05g" target="_blank">My
+            <p>Check out <a href="https://www.youtube.com/watch?v=36m1o-tM05g" target="_blank">My
               Philosophy for a Happy
               Life</a> or <a href="https://www.youtube.com/watch?v=w7rewjFNiys" target="_blank">The Art of Letting
               Go</a> to get started.</p>
@@ -39,8 +32,8 @@
             <h6 class="card-text text-center">Total Number of Subscribers: 7.48+ Million</h6>
             <p class="card-text text-center">The title of this channel says it all. There's a range of inspirational
               talks, aimed to motivate you into action.</p>
-            <p style="margin-top: 112px">Check out videos like <a href="https://www.youtube.com/watch?v=9pTedcBApmU"
-                                                                  target="_blank">Never Lazy
+            <p style="margin-top: 50px">Check out videos like <a href="https://www.youtube.com/watch?v=9pTedcBApmU"
+                                                                 target="_blank">Never Lazy
               Again</a>, <a href="https://www.youtube.com/watch?v=kak8PEl_v1I" target="_blank">Start Your Day Right</a>,
               and <a href="https://www.youtube.com/watch?v=jwjGw3BCryI" target="_blank">Winner's Mindset</a> for a
               sample of what's on offer.</p>
@@ -80,7 +73,7 @@
             <h6 class="card-text text-center">Total Number of Subscribers: 2.88+ Million</h6>
             <p class="card-text text-center">Improvement Pill releases animated lessons designed to help you improve
               your life in all sorts of different ways. </p>
-            <p style="margin-top: 65px">You can follow a range of different <a
+            <p style="margin-top: 50px">You can follow a range of different <a
               href="https://www.youtube.com/channel/UCBIt1VN5j37PVM8LLSuTTlw/playlists" target="_blank">courses written
               by Improvement Pill</a>, or dive into one-off lessons instead.</p>
           </div>
@@ -116,7 +109,7 @@
             <h6 class="card-text text-center">Total Number of Subscribers: 3.8+ Million</h6>
             <p class="card-text text-center">This YouTube channel has some of the best motivational videos for getting
               pumped.</p>
-            <p style="margin-top: 40px">Check out these videos about <a
+            <p style="margin-top: 50px">Check out these videos about <a
               href="https://www.youtube.com/watch?v=b3H4M10rxgI" target="_blank">three-minute
               motivational bursts</a>, <a href="https://www.youtube.com/watch?v=d51n7RRsNVo" target="_blank">20-minute
               speeches</a>, <a
@@ -157,7 +150,7 @@
             <h6 class="card-text text-center">Total Number of Subscribers: 3.04+ Million</h6>
             <p class="card-text text-center">Motivation Madness uploads hours of inspirational speeches from successful
               figures. </p>
-            <p style="margin-top: 40px">Many of these speeches, like <a
+            <p style="margin-top: 10px">Many of these speeches, like <a
               href="https://www.youtube.com/watch?v=M99NCxR0a-Q&amp;t="
               target="_blank">Denzel Washington's life advice</a>, are from graduation
               ceremonies. But you can take lessons from these videos wherever you are in life.</p>
@@ -175,7 +168,7 @@
             <h6 class="card-text text-center">Total Number of Subscribers: 1.78+ Million</h6>
             <p class="card-text text-center">
             <p>Most of us don't have time to read all the best self-improvement books out there:</p>
-            <p style="margin-top: 55px">Check out these videos about <a
+            <p style="margin-top: 30px">Check out these videos about <a
               href="https://www.youtube.com/watch?v=uqXVAo7dVRU" target="_blank">Thinking,
               Fast and Slow</a>, <a href="https://www.youtube.com/watch?v=2hHNq45rEnU" target="_blank">Learned
               Optimism</a>, <a href="https://www.youtube.com/watch?v=ktlTxC4QG8g" target="_blank">The 7 Habits of Highly
@@ -199,7 +192,7 @@
                                                              target="_blank">Psychology of the Great</a>, <a
                 href="https://www.youtube.com/watch?v=wTblbYqQQag" target="_blank">What It All Means</a>, and <a
                 href="https://www.youtube.com/watch?v=p0p1fjLPjYQ" target="_blank">Why You're Not Happy</a>.</p>
-            <p style="margin-top: 40px">Do yourself a favor and think about the message after each video. If you need
+            <p style="margin-top: 30px">Do yourself a favor and think about the message after each video. If you need
               motivation in ten minutes
               or less, this one of the best YouTube channels around.</p>
           </div>
@@ -217,7 +210,8 @@
             <p class="card-text text-center">Eric Thomas is a motivational speaker, educator, preacher, podcaster, and
               entrepreneur. His motivational YouTube videos can help you develop the mindset you need for effective
               self-help..</p>
-            <p>If you don't mind Thomas's faith-inspired perspective on personal development, this channel is a great
+            <p style="margin-top: 30px">If you don't mind Thomas's faith-inspired perspective on personal development,
+              this channel is a great
               resource. Particularly popular videos include <a href="https://www.youtube.com/watch?v=7Oxz060iedY"
                                                                target="_blank">You Owe You</a> or <a
                 href="https://www.youtube.com/watch?v=7KdX59e2wbs" target="_blank">Affirm Your Goals</a>.</p>
@@ -245,12 +239,5 @@
       </div>
     </div>
   </ng-container>
-  <ng-template #errorBlock>
-    <div class="card mt-5 pt-5 pb-5">
-      <div class="card-body">
-        <h3 class="text-center">{{ invalidStr }}</h3>
-      </div>
-    </div>
-  </ng-template>
 </div>
 

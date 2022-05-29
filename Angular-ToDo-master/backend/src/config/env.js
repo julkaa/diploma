@@ -1,8 +1,8 @@
 const env = {
     database: 'db',
-    username: 'root',
-    password: 'password',
-    host: 'localhost',
+    username: 'roman',
+    password: '!Password',
+    host: 'mytodoserver.mysql.database.azure.com',
     dialect: 'mysql',
     pool: {
         max: 5,
