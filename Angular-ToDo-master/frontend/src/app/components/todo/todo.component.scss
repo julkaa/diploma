@@ -93,3 +93,10 @@
     font-weight: normal;
   }
 }
+
+.add-task:hover {
+  transition: .3s;
+  cursor: pointer;
+  background-color: rgb(27, 105, 27);
+}
+

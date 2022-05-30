@@ -20,10 +20,12 @@
 <!--</div>-->
 <div class="list-wrapper">
   <mat-list *ngFor="let list of lists">
-    <mat-label routerLink="/todo">{{list.title}}</mat-label>
-    <button routerLink="/task" (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
+    <mat-label>{{list.title}}</mat-label>
+    <button (click)="goToToDo($event)" value="{{list.id}}" class="add-btn">show</button>
+    <button (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
     <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>
-    <mat-list-item *ngFor="let task of tasks">{{task.text}}
+    <mat-list-item *ngFor="let task of tasks" [ngStyle]="{'display': task.list_id == list.id ? '' : 'none'}">
+      {{task.text}}
       <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>
       <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>
     </mat-list-item>

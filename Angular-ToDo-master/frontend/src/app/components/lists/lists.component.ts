@@ -29,6 +29,7 @@ export class ListsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getLists(this.userId);
+    localStorage.setItem('listId', '');
   }
 
   get sidebarWidth(): number {
@@ -75,9 +76,14 @@ export class ListsComponent implements OnInit {
   newTask(event) {
     console.log(event);
     event.target.id = event.target.value;
-    console.log(event.target.id);
     localStorage.setItem('listId', event.target.id.toString());
     this.router.navigate(['/task']);
+  }
+
+  goToToDo(event) {
+    event.target.id = event.target.value;
+    localStorage.setItem('listId', event.target.id.toString());
+    this.router.navigate(['/todo']);
   }
 
   deleteTask(id) {
