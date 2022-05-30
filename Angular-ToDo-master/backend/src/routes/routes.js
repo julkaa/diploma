@@ -14,6 +14,7 @@ module.exports = function (app) {
     listController.deleteList
   );
   app.post("/add-task", autorizated.validateToken, listController.createTask);
+  app.post("/updateTask", autorizated.validateToken, listController.updateTask);
   app.delete(
     "/delete-task/:id",
     autorizated.validateToken,
