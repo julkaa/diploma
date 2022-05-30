@@ -72,6 +72,19 @@ exports.createTask = (req, res) => {
 		res.status(500).send("Fail! Error -> " + err);
 	})
 }
+exports.updateTask = (req, res) => {
+	Task.update({
+		text: req.body.text,
+		user_id: req.body.user_id,
+		list_id:req.body.list_id,
+		done: req.body.IsDone,
+		inprogress: req.body.IsInProgress
+	}).then(() => {
+		res.json({message:"task updated successfuly"});
+	}).catch(err => {
+		res.status(500).send("Fail! Error -> " + err);
+	})
+}
 exports.getTasks = (req,res)=>{
 	Task.findAll().then(task=>{
 		
