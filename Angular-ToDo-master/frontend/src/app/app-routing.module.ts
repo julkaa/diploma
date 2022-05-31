@@ -10,6 +10,7 @@ import { VideoComponent } from './components/video/video.component';
 import { PostComponent } from './components/post/post.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { TaskComponent } from './components/task/task.component';
+import { NoteComponent } from './components/note/note.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'post',
     component: PostComponent,
+  },
+  {
+    path: 'note',
+    component: NoteComponent,
   },
   {
     path: 'profile',

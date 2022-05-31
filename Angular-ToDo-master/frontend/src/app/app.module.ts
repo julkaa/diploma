@@ -31,6 +31,9 @@ import { PostComponent } from './components/post/post.component';
 import { VideoComponent } from './components/video/video.component';
 import { InfiniteTypeDeleteModule } from 'ngx-sbz-type-delete';
 import { MatListModule } from '@angular/material/list';
+import { NoteComponent } from './components/note/note.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,8 @@ import { MatListModule } from '@angular/material/list';
     TopNavComponent,
     PostComponent,
     VideoComponent,
+    NoteComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,6 +75,7 @@ import { MatListModule } from '@angular/material/list';
     MatSelectModule,
     InfiniteTypeDeleteModule,
     MatListModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

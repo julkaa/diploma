@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+}
+
+.modal-window {
+  &__header {
+    background-color: #726580;
+    box-shadow: 0 0 50px 0 #e7e7e7;
+    position: relative;
+  }
+
+  &__title {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+  }
+
+  &__body {
+    padding: 25px;
+  }
+}
