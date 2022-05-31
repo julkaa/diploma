@@ -71,4 +71,13 @@ export class PublicationService {
       headers: headers,
     });
   }
+
+  editTask(task) {
+    let headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Authorization', this.getToken());
+    return this.http.delete<any>(this.URL + '/update-task/' + task.id, {
+      headers: headers,
+    });
+  }
 }

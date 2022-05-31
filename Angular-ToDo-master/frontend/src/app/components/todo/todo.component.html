@@ -18,7 +18,7 @@
                   color="primary" class="add-task">Add
             Task
           </button>
-          <button *ngIf="isEditEnabled" (click)="updateTask()" mat-raised-button [disabled]="todoForm.invalid"
+          <button *ngIf="isEditEnabled" (click)="updateTask(task.id)" mat-raised-button [disabled]="todoForm.invalid"
                   color="accent">Update Task
           </button>
         </form>
@@ -44,8 +44,7 @@
 
               <div cdkDropList [cdkDropListData]="tasks" class="drag-drop-list"
                    (cdkDropListDropped)="drop($event)">
-                <div class="drag-drop-box" *ngFor="let task of tasks; let i = index" cdkDrag
-                     [ngStyle]="{'display': task.list_id == listId ? '' : 'none'}">
+                <div class="drag-drop-box" *ngFor="let task of tasks; let i = index" cdkDrag>
                   {{task.text}}
                   <div class="box">
                     <button mat-icon-button color="warn" (click)="deleteTask(i, $event)" value="{{task.id}}">

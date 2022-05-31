@@ -29,6 +29,8 @@ export class TodoComponent implements OnInit {
   userId: any;
   lists: List[];
   tasks: Task[];
+  isDone = false;
+  IsInProgress = false;
   identity = JSON.parse(localStorage.getItem('user'));
   listId = JSON.parse(localStorage.getItem('listId'));
   task: Task = {
@@ -36,10 +38,10 @@ export class TodoComponent implements OnInit {
     text: '',
     user_id: +this.identity.id,
     list_id: +this.listId,
-    inprogress: false,
-    done: false,
+    inprogress: this.isDone,
+    done: this.IsInProgress,
   };
-  tasksArray = [];
+  arr = [];
 
   constructor(
     private fb: FormBuilder,
@@ -55,13 +57,14 @@ export class TodoComponent implements OnInit {
       task: ['', Validators.required],
     });
     this.getLists(this.user.userId);
-    this.getTask(this.listId);
-    console.log(this.task);
+    // this.getTask(this.listId);
+
+    console.log(this.arr);
   }
 
-  getTask(idishkalist) {
-    console.log(this.task);
-  }
+  // getTask(idishkalist) {
+  //   console.log(this.task);
+  // }
 
   addTask(id) {
     this.tasks.push({
@@ -89,10 +92,20 @@ export class TodoComponent implements OnInit {
     this.isEditEnabled = true;
   }
 
-  updateTask() {
+  updateTask(id) {
     this.tasks[this.updateIndex].text = this.todoForm.value.task;
     this.tasks[this.updateIndex].done = false;
     this.todoForm.reset();
+
+    this.publicationService.editTask(this.tasks[this.updateIndex]).subscribe(
+      (res3) => {
+        console.log(res3);
+        this.refresh();
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
     this.updateIndex = undefined;
     this.isEditEnabled = false;
   }
@@ -146,9 +159,15 @@ export class TodoComponent implements OnInit {
     console.log(this.user.userId);
     this.publicationService.getLists(idishka).subscribe(
       (res) => {
-        console.log(res);
         this.lists = res.lists;
-        this.tasks = res.tasks;
+        res.tasks.forEach((element) => {
+          const listid = element.list_id;
+          if (listid === this.listId) {
+            this.arr.push(element);
+          }
+        });
+        this.tasks = this.arr;
+        console.log(res);
       },
       (err) => {
         console.log(err);

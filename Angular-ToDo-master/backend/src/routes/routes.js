@@ -20,12 +20,16 @@ module.exports = function (app) {
     listController.deleteList
   );
   app.delete(
-    "/delete-node/:id",
+    "/delete-note/",
     autorizated.validateToken,
     noteController.deleteNote
   );
   app.post("/add-task", autorizated.validateToken, listController.createTask);
-  app.post("/updateTask", autorizated.validateToken, listController.updateTask);
+  app.post(
+    "/update-task/:id",
+    autorizated.validateToken,
+    listController.updateTask
+  );
   app.delete(
     "/delete-task/:id",
     autorizated.validateToken,
