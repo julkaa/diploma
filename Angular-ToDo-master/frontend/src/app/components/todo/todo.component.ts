@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ITask } from '../../model/task';
 import {
   CdkDragDrop,
   moveItemInArray,
@@ -40,6 +39,7 @@ export class TodoComponent implements OnInit {
     inprogress: false,
     done: false,
   };
+  tasksArray = [];
 
   constructor(
     private fb: FormBuilder,
@@ -54,7 +54,13 @@ export class TodoComponent implements OnInit {
     this.todoForm = this.fb.group({
       task: ['', Validators.required],
     });
-    this.getLists(this.userId);
+    this.getLists(this.user.userId);
+    this.getTask(this.listId);
+    console.log(this.task);
+  }
+
+  getTask(idishkalist) {
+    console.log(this.task);
   }
 
   addTask(id) {
@@ -91,8 +97,23 @@ export class TodoComponent implements OnInit {
     this.isEditEnabled = false;
   }
 
-  deleteTask(i: number) {
+  refresh($event = null) {
+    console.log(event);
+    this.getLists(this.userId);
+  }
+
+  deleteTask(i: number, id) {
     this.tasks.splice(i, 1);
+    console.log(id);
+    this.publicationService.deleteTask(id).subscribe(
+      (res) => {
+        console.log(res);
+        this.refresh();
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 
   deleteInProgress(i: number) {
@@ -103,7 +124,7 @@ export class TodoComponent implements OnInit {
     this.done.splice(i, 1);
   }
 
-  drop(event: CdkDragDrop<ITask[]>) {
+  drop(event: CdkDragDrop<Task[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
@@ -120,10 +141,10 @@ export class TodoComponent implements OnInit {
     }
   }
 
-  getLists(id) {
-    const userId = this.user.id;
-    console.log(userId);
-    this.publicationService.getLists(userId).subscribe(
+  getLists(idishka) {
+    const userId = this.user.idishka;
+    console.log(this.user.userId);
+    this.publicationService.getLists(idishka).subscribe(
       (res) => {
         console.log(res);
         this.lists = res.lists;

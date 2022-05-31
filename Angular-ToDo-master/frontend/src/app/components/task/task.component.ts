@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Task } from '../../interfaces/Task';
 import { UserService } from '../../services/user.service';
 import { PublicationService } from 'src/app/services/publication.service';
@@ -8,11 +8,11 @@ import { List } from '../../interfaces/List';
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
-  styleUrls: ['./task.component.css'],
+  styleUrls: ['./task.component.scss'],
 })
 export class TaskComponent implements OnInit {
-  identity = JSON.parse(localStorage.getItem('user'));
-  listId = JSON.parse(localStorage.getItem('listId'));
+  @Input() identity = JSON.parse(localStorage.getItem('user'));
+  @Input() listId = JSON.parse(localStorage.getItem('listId'));
   lists: List[];
   id: string;
   task: Task = {
@@ -36,7 +36,7 @@ export class TaskComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.lists);
+    // console.log(this.lists);
   }
 
   addTask(id) {
@@ -44,7 +44,9 @@ export class TaskComponent implements OnInit {
     this.publicationService.addTask(this.task).subscribe(
       (res) => {
         console.log(res);
+        window.location.reload();
         this.router.navigate(['/list']);
+        localStorage.setItem('listId', '');
       },
       (err) => {
         console.log(err);

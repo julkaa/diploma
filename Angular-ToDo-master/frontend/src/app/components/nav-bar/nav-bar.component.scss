@@ -5,12 +5,14 @@
 
 nav {
   font-family: Segoe UI, sans-serif;
-  height: 100%;
+  height: 110%;
   width: 10%;
   position: fixed;
   z-index: 1;
-  background-color: black;
+  background: #726580;
+  //box-shadow: 0 0 50px 0 #e7e7e7;
   color: white;
+  font-weight: 600;
 
   ul {
     height: 65%;
@@ -25,7 +27,7 @@ nav {
       cursor: pointer;
 
       &:hover {
-        color: #c5a84e;
+        color: black;
         border-left: 3px solid #c5a84e;
 
       }
@@ -34,7 +36,7 @@ nav {
         margin-right: 2%;
         font-size: 22px;
         vertical-align: bottom;
-        color: #c5a84e;
+        color: black;
       }
     }
   }

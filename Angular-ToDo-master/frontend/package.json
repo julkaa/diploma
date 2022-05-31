@@ -26,6 +26,7 @@
     "@angular/platform-browser": "~13.3.10",
     "@angular/platform-browser-dynamic": "~13.3.10",
     "@angular/router": "~13.3.10",
+    "bootstrap": "^5.2.0-beta1",
     "ngx-quill": "^16.2.1",
     "ngx-sbz-type-delete": "^2.0.3",
     "rxjs": "~6.5.4",

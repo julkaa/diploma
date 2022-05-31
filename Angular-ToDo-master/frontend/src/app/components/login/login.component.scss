@@ -13,7 +13,7 @@ input {
 }
 
 .loginBtn {
-  background-color: #9142f6;
+  background: #726580;
   height: 25px;
   color: white;
   border: 0px;
@@ -22,9 +22,15 @@ input {
 }
 
 .returnBtn {
-  color: #9142f6;
+  background: #726580;
   background-color: white;
   border: 0px;
+  font-weight: 500;
+
+  &:hover {
+    color: black;
+    font-weight: 700;
+  }
 }
 
 .is-invalid {

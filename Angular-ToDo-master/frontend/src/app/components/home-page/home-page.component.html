@@ -1,25 +1,27 @@
+<nav-bar></nav-bar>
 <h1>
   Hello, how may i<br> help you?
 </h1>
 
 <div class="main">
-  <div class="wrapper">
-    <div class="content"><span class="material-icons">search</span> Watch Service
+  <div class="wrapper" routerLink="/video">
+    <div class="content"><span class="material-icons">search</span> Watch Video
       <span style="margin-left: 200px;" class="material-icons">navigate_next</span>
     </div>
   </div>
-  <div class="wrapper">
-    <div class="content"><span class="material-icons">how_to_reg</span> Existing Costumer<span
+  <div class="wrapper" routerLink="/profile">
+    <div class="content"><span class="material-icons">how_to_reg</span> Your Profile<span
       style="margin-left: 170px;" class="material-icons">navigate_next</span></div>
   </div>
-  <div class="wrapper" style="margin-left: 60px;">
-    <div class="content"><span class="material-icons">add_box</span>New Costumer
+  <div class="wrapper" routerLink="/lists" style="margin-left: 60px;">
+    <div class="content"><span class="material-icons">add_box</span> New Lists
       <span style="margin-left: 200px;" class="material-icons">navigate_next</span>
     </div>
   </div>
-  <div class="wrapper">
-    <div class="content"><span class="material-icons">cached</span>Look around
+  <div class="wrapper" routerLink="/Note">
+    <div class="content"><span class="material-icons">cached</span> Make Some Notes
       <span style="margin-left: 220px;" class="material-icons">navigate_next</span>
     </div>
   </div>
 </div>
+<router-outlet></router-outlet>

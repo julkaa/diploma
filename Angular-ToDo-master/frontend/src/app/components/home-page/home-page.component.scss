@@ -1,14 +1,14 @@
 .main {
   height: 400px;
   width: 80%;
-  margin: auto;
+  margin: 0 0 0 17%;
   display: flex;
   flex-wrap: wrap;
 }
 
 h1 {
   margin: auto;
-  width: 75%;
+  width: 70%;
   font-size: 70px;
   padding: 55px 40px;
 }
@@ -17,7 +17,8 @@ h1 {
   height: 160px;
   width: 40%;
   margin: 20px;
-  background-color: black;
+  background: #726580;
+  box-shadow: 0 0 50px 0 #e7e7e7;
   color: white;
   cursor: pointer;
 
@@ -31,7 +32,7 @@ h1 {
   }
 
   &:hover {
-    background-color: #c5a84e;
+    background-color: black;
     transition: .5s;
     transform: scale(1.03);
 
@@ -44,7 +45,7 @@ h1 {
 }
 
 .material-icons {
-  color: #c5a84e;
+  color: black;
   margin-right: 15px;
 }
 

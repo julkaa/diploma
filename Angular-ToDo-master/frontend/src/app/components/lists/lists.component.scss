@@ -1,12 +1,32 @@
+::ng-deep {
+  .mat-list-item-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button {
+    margin-left: 10px;
+  }
+}
+
 .user {
   text-align: center;
 }
 
-.list-wrapper {
-  width: 40%;
-  float: left;
-  margin: 120px 20px 0 20px;
+.row {
+  //width: 60%;
+  //margin-top: 200px;
+  margin: 200px 80px 0 80px;
+  justify-content: space-between;
 }
+
+.list-wrapper {
+  //width: 40%;
+  float: left;
+  //margin-right: 120px;
+}
+
 
 mat-list-item {
   background-color: #fff;
@@ -15,10 +35,19 @@ mat-list-item {
   box-shadow: 0 0 10px 0 #e7e7e7;
 }
 
+
+.show-btn {
+  background: #726580;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
 .add-btn {
   background-color: rgb(76, 161, 76);
   color: white;
-  padding: .2rem .5rem;
+  padding: 0.3rem 0.8rem;
   border: 1px solid white;
   border-radius: 7px;
 
@@ -32,7 +61,7 @@ mat-list-item {
 .delete-btn {
   background-color: rgb(216, 86, 93);
   color: white;
-  padding: .2rem .5rem;
+  padding: 0.3rem 0.8rem;
   border: 1px solid white;
   border-radius: 7px;
 
@@ -57,7 +86,7 @@ hr {
 
 //////
 .right-nav {
-  width: 50%;
+  width: 100%;
   float: right;
   margin-top: 20px;
   margin-right: -40px;
@@ -80,6 +109,7 @@ hr {
   z-index: 3;
   transition: width 1s;
   margin: 100px 20px 0 20px;
+  overflow: hidden;
 }
 
 .sizer {
@@ -176,4 +206,8 @@ hr {
     padding: 12px 0 0 0;
     font-size: 18px;
   }
+}
+
+button {
+  float: right;
 }

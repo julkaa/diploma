@@ -18,25 +18,51 @@
 <!--    </div>-->
 <!--  </div>-->
 <!--</div>-->
-<div class="list-wrapper">
-  <mat-list *ngFor="let list of lists">
-    <mat-label>{{list.title}}</mat-label>
-    <button (click)="goToToDo($event)" value="{{list.id}}" class="add-btn">show</button>
-    <button (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
-    <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>
-    <mat-list-item *ngFor="let task of tasks" [ngStyle]="{'display': task.list_id == list.id ? '' : 'none'}">
-      {{task.text}}
-      <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>
-      <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>
-    </mat-list-item>
-    <hr>
-  </mat-list>
+<div class="row">
+  <div class="list-wrapper col-5">
+    <mat-list *ngFor="let list of lists">
+      <mat-label>{{list.title}}</mat-label>
 
+      <button (click)="deleteList($event)" value="{{list.id}}" class="delete-btn" style="margin-right: 18px">Delete
+        List
+      </button>
+      <button (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
+      <button (click)="goToToDo($event)" value="{{list.id}}" class="show-btn">ToDo List</button>
+
+      <mat-list-item *ngFor="let task of tasks" [ngStyle]="{'display': task.list_id == list.id ? '' : 'none'}">
+        <span>{{task.text}}</span>
+        <div>
+          <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>
+          <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>
+        </div>
+      </mat-list-item>
+      <hr>
+    </mat-list>
+
+  </div>
+  <!--<div>-->
+  <!--  <div class="publication-form">-->
+  <!--    <form (submit)="addList()">-->
+  <!--      <input type="text" name="list" [(ngModel)]="list.title" placeholder="Add List" required>-->
+  <!--      <button type="submit">Add List</button>-->
+  <!--    </form>-->
+  <!--  </div>-->
+  <!--</div>-->
+  <!--<div>-->
+  <!--  <div class="addList-form">-->
+  <!--    <form (submit)="addTask($event)">-->
+  <!--      <input type="text" name="text" [(ngModel)]="task.text" placeholder="Add Task" required>-->
+  <!--      <button type="submit">Add Task</button>-->
+  <!--    </form>-->
+  <!--  </div>-->
+  <!--</div>-->
+  <div class="col-3">
+    <app-publications></app-publications>
+  </div>
 </div>
-
 <div class="sizer-wrap" (click)="toggle()" [style.width.px]="sidebarWidth">
   <div class="right-nav" [style.width.px]="sidebarWidth">
-    <p>navbar</p>
+    <nav-bar></nav-bar>
   </div>
   <div class="strip"></div>
   <div class="sizer">

@@ -8,8 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonComponent implements OnInit {
   @Input('text') text: string;
   @Input('route') route: string;
+  expanded = false;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  toggle(): void {
+    this.expanded = !this.expanded;
+  }
+
+  get sidebarWidth(): number {
+    return this.expanded ? 300 : 15;
+  }
 }

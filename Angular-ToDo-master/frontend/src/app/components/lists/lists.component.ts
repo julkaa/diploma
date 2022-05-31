@@ -14,6 +14,8 @@ export class ListsComponent implements OnInit {
   lists: List[];
   tasks: Task[];
   user;
+  // identity = JSON.parse(localStorage.getItem('user'));
+  // listId = JSON.parse(localStorage.getItem('listId'));
   // tslint:disable-next-line:variable-name
   userId: any;
   expanded = false;
@@ -28,7 +30,7 @@ export class ListsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getLists(this.userId);
+    this.getLists(this.user.userId);
     localStorage.setItem('listId', '');
   }
 
@@ -45,10 +47,10 @@ export class ListsComponent implements OnInit {
     this.getLists(this.userId);
   }
 
-  getLists(id) {
-    const userId = this.user.id;
-    console.log(userId);
-    this.publicationService.getLists(userId).subscribe(
+  getLists(idishka) {
+    const userId = this.user.idishka;
+    console.log(this.user.userId);
+    this.publicationService.getLists(idishka).subscribe(
       (res) => {
         console.log(res);
         this.lists = res.lists;
@@ -77,7 +79,7 @@ export class ListsComponent implements OnInit {
     console.log(event);
     event.target.id = event.target.value;
     localStorage.setItem('listId', event.target.id.toString());
-    this.router.navigate(['/task']);
+    this.router.navigate(['/list/add-task']);
   }
 
   goToToDo(event) {
@@ -89,8 +91,8 @@ export class ListsComponent implements OnInit {
   deleteTask(id) {
     console.log('that is', id);
     this.publicationService.deleteTask(id).subscribe(
-      (res) => {
-        console.log(res);
+      (res3) => {
+        console.log(res3);
         this.refresh();
       },
       (err) => {

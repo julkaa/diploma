@@ -6,14 +6,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-publications',
   templateUrl: './publications.component.html',
-  styleUrls: ['./publications.component.css'],
+  styleUrls: ['./publications.component.scss'],
 })
 export class PublicationsComponent implements OnInit {
   identity = JSON.parse(localStorage.getItem('user'));
   list: List = {
     id: '',
     title: '',
-    user_id: +this.identity.id,
+    user_id: +this.identity.userId,
   };
 
   constructor(
@@ -29,7 +29,7 @@ export class PublicationsComponent implements OnInit {
     this.publicationService.addList(this.list).subscribe(
       (res) => {
         console.log(res);
-        this.router.navigate(['/list']);
+        window.location.reload();
       },
       (err) => {
         console.log(err);

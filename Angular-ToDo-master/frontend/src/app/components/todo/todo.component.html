@@ -48,7 +48,7 @@
                      [ngStyle]="{'display': task.list_id == listId ? '' : 'none'}">
                   {{task.text}}
                   <div class="box">
-                    <button mat-icon-button color="warn" (click)="deleteTask(i)">
+                    <button mat-icon-button color="warn" (click)="deleteTask(i, $event)" value="{{task.id}}">
                       <mat-icon>delete</mat-icon>
                     </button>
                     <button mat-icon-button color="primary" (click)="onEdit(task,i)">

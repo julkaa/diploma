@@ -1,12 +1,24 @@
 .wrapper {
-  width: 25%;
+  width: 40%;
   margin: auto;
+  font-size: 20px;
 
   img {
     width: 100px;
     height: 100px;
-    margin-left: 37%;
+    margin-top: 50px;
+    margin-left: 43%;
     margin-bottom: 20px;
+  }
+}
+
+::ng-deep {
+  .wrapper .mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+    padding: 0 30px;
+  }
+
+  .wrapper nav {
+    margin-top: -20px;
   }
 }
 
@@ -15,8 +27,11 @@ mat-list-item {
   -webkit-box-shadow: 0 0 10px 0 #e7e7e7;
   -moz-box-shadow: 0 0 10px 0 #e7e7e7;
   box-shadow: 0 0 10px 0 #e7e7e7;
+  padding: 0 30px;
 
   span {
-    margin-right: 30px;
+    margin-right: 60px;
   }
 }
+
+///////////////////
