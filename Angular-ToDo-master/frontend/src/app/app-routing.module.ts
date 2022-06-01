@@ -14,56 +14,19 @@ import { NoteComponent } from './components/note/note.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  {
-    path: 'todo',
-    component: TodoComponent,
-  },
-  {
-    path: 'video',
-    component: VideoComponent,
-  },
-  {
-    path: 'post',
-    component: PostComponent,
-  },
-  {
-    path: 'note',
-    component: NoteComponent,
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent,
-  },
-  {
-    path: 'registration',
-    component: SignupComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  // {
-  //   path: 'add-list',
-  //   component: PublicationsComponent,
-  // },
-  // {
-  //   path: 'task',
-  //   component: TaskComponent,
-  // },
+  { path: 'todo', component: TodoComponent },
+  { path: 'video', component: VideoComponent },
+  { path: 'post', component: PostComponent },
+  { path: 'note', component: NoteComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'registration', component: SignupComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: 'list',
     component: ListsComponent,
-    children: [
-      {
-        path: 'add-task',
-        component: TaskComponent,
-      },
-    ],
+    children: [{ path: 'add-task', component: TaskComponent }],
   },
-  {
-    path: 'not-found',
-    component: NotFoundComponent,
-  },
+  { path: 'not-found', component: NotFoundComponent },
   { path: '**', redirectTo: 'not-found' },
 ];
 
