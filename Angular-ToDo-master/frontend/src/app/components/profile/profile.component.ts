@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -9,8 +9,7 @@ import { UserService } from '../../services/user.service';
 export class ProfileComponent implements OnInit {
   user;
   gender;
-  @Input() expanded = false;
-  @Output() manualToggle = new EventEmitter();
+  expanded = false;
 
   constructor(private userService: UserService) {
     this.user = this.userService.getIdentity();
@@ -19,11 +18,10 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {}
 
   get sidebarWidth(): number {
-    return this.expanded ? 300 : 15;
+    return this.expanded ? 0 : -137;
   }
 
   toggle() {
     this.expanded = !this.expanded;
-    // this.manualToggle.emit();
   }
 }

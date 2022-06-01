@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PublicationService } from '../../services/publication.service';
 import { List } from '../../interfaces/List';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-publications',
@@ -10,16 +9,16 @@ import { Router } from '@angular/router';
 })
 export class PublicationsComponent implements OnInit {
   identity = JSON.parse(localStorage.getItem('user'));
+
   list: List = {
     id: '',
     title: '',
     user_id: +this.identity.userId,
+    // @ts-ignore
+    done: false,
   };
 
-  constructor(
-    private publicationService: PublicationService,
-    private router: Router
-  ) {}
+  constructor(private publicationService: PublicationService) {}
 
   ngOnInit(): void {
     console.log(this.identity);
@@ -36,17 +35,4 @@ export class PublicationsComponent implements OnInit {
       }
     );
   }
-
-  // getLists(){
-  //   this.publicationService.getLists().subscribe(
-  //     res=>{
-  //       console.log(res)
-
-  //     },
-  //     err=>{
-  //       console.log(err)
-
-  //     }
-  //   )
-  // }
 }

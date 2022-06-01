@@ -1,6 +1,13 @@
 <app-top-nav [title]="'Profile'"></app-top-nav>
 
-<app-button (click)="toggle()" [style.width.px]="sidebarWidth"></app-button>
+<div class="moving-nav" (click)="toggle()" [style.left.px]="sidebarWidth">
+  <nav-bar [padding]='80'></nav-bar>
+  <button class="btn">
+    <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>
+    <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>
+  </button>
+</div>
+
 <div class="wrapper" style="margin-top: 120px">
   <img *ngIf="user.gender.toLowerCase() == 'male'" src="https://cdn-icons-png.flaticon.com/512/634/634788.png"
        alt="avatar">

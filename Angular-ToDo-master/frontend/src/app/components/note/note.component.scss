@@ -1,10 +1,8 @@
-a {
-  text-decoration: none;
-  color: #c5a84e;
-}
-
-.d-flex a {
-  color: black;
+mat-list-item {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 10px 0 #e7e7e7;
+  -moz-box-shadow: 0 0 10px 0 #e7e7e7;
+  box-shadow: 0 0 10px 0 #e7e7e7;
 }
 
 .btn {
@@ -22,7 +20,6 @@ a {
 }
 
 .main-wrapper {
-  margin-top: 120px;
-  margin-left: 50px;
-  width: 95%
+  margin: 120px 20px 10px 20px;
+  width: 96%
 }

@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <nav>
+  <nav [style.padding-top.px]="padding">
     <ul>
       <ng-container *ngIf="!userService.loggedIn(); else loggedIn">
         <li style="margin-top: -350px">
@@ -28,12 +28,6 @@
         <li>
           <span routerLink="/note"><span class="material-icons">bookmarks</span>Notes</span>
         </li>
-        <!--        <li>-->
-        <!--          <span routerLink="/list"><span class="material-icons">bookmarks</span>Lists</span>-->
-        <!--        </li>-->
-        <!--        <li>-->
-        <!--          <span routerLink="/task"><span class="material-icons">bookmarks</span>Add Task</span>-->
-        <!--        </li>-->
         <li>
           <span (click)="userService.logOut()"><span class="material-icons">logout</span>Log Off</span>
         </li>
@@ -41,5 +35,4 @@
     </ul>
   </nav>
 </div>
-<!--<home-page></home-page>-->
-<!--<router-outlet></router-outlet>-->
+<router-outlet></router-outlet>

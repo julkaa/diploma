@@ -6,7 +6,6 @@ const User = db.user;
 const bcrypt = require("bcryptjs");
 
 exports.signup = (req, res) => {
-  // Save User to Database
   User.create({
     username: req.body.username,
     firstName: req.body.firstName,
@@ -34,7 +33,6 @@ exports.signin = (req, res) => {
       if (!user) {
         return res.status(404).send("User Not Found.");
       }
-
       var passwordIsValid = bcrypt.compareSync(
         req.body.password,
         user.password

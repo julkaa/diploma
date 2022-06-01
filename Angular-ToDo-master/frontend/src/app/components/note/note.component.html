@@ -1,0 +1,41 @@
+<app-top-nav [title]="'Notes'"></app-top-nav>
+
+<div class="moving-nav" (click)="toggle()" [style.left.px]="sidebarWidth">
+  <nav-bar [padding]='80'></nav-bar>
+  <button class="btn">
+    <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>
+    <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>
+  </button>
+</div>
+<div class="main-wrapper">
+  <div class="row" style="margin: 120px 20px 10px 20px">
+    <div class="col-3">
+      <button mat-raised-button (click)="openDialog()">Add New Note</button>
+    </div>
+    <div class="col-9">
+      <button mat-raised-button (click)="save()">Save Note</button>
+    </div>
+  </div>
+  <div class="row" style="margin: 0 20px 0 20px">
+    <div class="col-3">
+      <mat-list>
+        <mat-list-item *ngFor="let note of notes"><span (click)="onSelectNote(note)">{{note.title}}</span>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <div class="col-9">
+            <textarea style="width: 100%;height: 240%;" type="text" name="note"
+                      placeholder="Add Note"
+                      required>{{note.text}}</textarea>
+      <!--      <form [formGroup]="editNoteForm" (ngSubmit)="save()">-->
+      <!--        <mat-form-field class="full-width">-->
+      <!--          <input matInput placeholder="Title" formControlName="title">-->
+      <!--        </mat-form-field>-->
+      <!--        <textarea style="width: 100%;height: 530%;" type="text" formControlName="text"-->
+      <!--                  placeholder="Add Note"-->
+      <!--                  required>{{note.text}}</textarea>-->
+      <!--        <button type="submit" mat-raised-button color="primary">Update</button>-->
+      <!--      </form>-->
+    </div>
+  </div>
+</div>

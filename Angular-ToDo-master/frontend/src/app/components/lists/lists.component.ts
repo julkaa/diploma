@@ -18,7 +18,7 @@ export class ListsComponent implements OnInit {
   // listId = JSON.parse(localStorage.getItem('listId'));
   // tslint:disable-next-line:variable-name
   userId: any;
-  expanded = false;
+  // expanded = false;
   manualToggle;
 
   constructor(
@@ -34,22 +34,12 @@ export class ListsComponent implements OnInit {
     localStorage.setItem('listId', '');
   }
 
-  get sidebarWidth(): number {
-    return this.expanded ? 240 : 15;
-  }
-
-  toggle() {
-    this.expanded = !this.expanded;
-  }
-
   refresh($event = null) {
     console.log(event);
     this.getLists(this.userId);
   }
 
   getLists(idishka) {
-    const userId = this.user.idishka;
-    console.log(this.user.userId);
     this.publicationService.getLists(idishka).subscribe(
       (res) => {
         console.log(res);
@@ -67,7 +57,7 @@ export class ListsComponent implements OnInit {
     this.publicationService.deleteList(id).subscribe(
       (res) => {
         console.log(res);
-        this.refresh();
+        window.location.reload();
       },
       (err) => {
         console.log(err);
@@ -89,7 +79,6 @@ export class ListsComponent implements OnInit {
   }
 
   deleteTask(id) {
-    console.log('that is', id);
     this.publicationService.deleteTask(id).subscribe(
       (res3) => {
         console.log(res3);

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Angular-ToDo-master.iml" filepath="$PROJECT_DIR$/.idea/Angular-ToDo-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../проги/okta-angular-notes-app-example-main/.idea/okta-angular-notes-app-example-main.iml" filepath="$PROJECT_DIR$/../проги/okta-angular-notes-app-example-main/.idea/okta-angular-notes-app-example-main.iml" />
     </modules>
   </component>
 </project>

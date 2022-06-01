@@ -1,5 +1,14 @@
 <app-top-nav [title]="'Videos'"></app-top-nav>
-<div style="margin: 120px 20px 0 20px">
+
+<div class="moving-nav" (click)="toggle()" [style.left.px]="sidebarWidth">
+  <nav-bar [padding]='80'></nav-bar>
+  <button class="btn">
+    <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>
+    <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>
+  </button>
+</div>
+
+<div class="main-wrapper">
   <ng-container>
     <div class="row pb-3">
       <div class="col-4 mt-4">

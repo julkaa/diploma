@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from '../../interfaces/Task';
 import { UserService } from '../../services/user.service';
 import { PublicationService } from 'src/app/services/publication.service';
@@ -11,8 +11,8 @@ import { List } from '../../interfaces/List';
   styleUrls: ['./task.component.scss'],
 })
 export class TaskComponent implements OnInit {
-  @Input() identity = JSON.parse(localStorage.getItem('user'));
-  @Input() listId = JSON.parse(localStorage.getItem('listId'));
+  identity = JSON.parse(localStorage.getItem('user'));
+  listId = JSON.parse(localStorage.getItem('listId'));
   lists: List[];
   id: string;
   task: Task = {
@@ -39,7 +39,7 @@ export class TaskComponent implements OnInit {
     // console.log(this.lists);
   }
 
-  addTask(id) {
+  addTask() {
     console.log(this.task);
     this.publicationService.addTask(this.task).subscribe(
       (res) => {

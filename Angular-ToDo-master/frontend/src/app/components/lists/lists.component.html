@@ -1,29 +1,19 @@
-<app-top-nav [title]="'Wishlist'"></app-top-nav>
-<!--<p class="user">Lists of {{user.username.toUpperCase()}}</p>-->
-<!--<div class="lists">-->
-<!--  <div *ngFor="let list of lists" class="publication">-->
-<!--    <div class="one-list">-->
-<!--      <p class="list-title">{{list.title}}</p>-->
-<!--      <button routerLink="/task" (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>-->
-<!--      &lt;!&ndash;      <button routerLink="/task" (click)="newTask(list.id)" class="add-btn">Add Task</button>&ndash;&gt;-->
-<!--      <button (click)="deleteList(list.id)" class="delete-btn">Delete List</button>-->
-<!--      <div *ngFor="let task of tasks">-->
-<!--        <div class="task" *ngIf="task.list_id == list.id">-->
-<!--          <p class="task-title">{{task.text}}</p>-->
-<!--          <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>-->
-<!--          <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>-->
-<!--        </div>-->
-<!--      </div>-->
+<app-top-nav [title]="'Wishlists'"></app-top-nav>
 
-<!--    </div>-->
-<!--  </div>-->
+<!--<div class="moving-nav" (click)="toggle()" [style.left.px]="sidebarWidth">-->
+<!--  <nav-bar [padding]='80'></nav-bar>-->
+<!--  <button class="btn">-->
+<!--    <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>-->
+<!--    <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>-->
+<!--  </button>-->
 <!--</div>-->
+<app-moving-nav></app-moving-nav>
 <div class="row">
   <div class="list-wrapper col-5">
     <mat-list *ngFor="let list of lists">
       <mat-label>{{list.title}}</mat-label>
 
-      <button (click)="deleteList($event)" value="{{list.id}}" class="delete-btn" style="margin-right: 18px">Delete
+      <button (click)="deleteList(list.id)" class="delete-btn" style="margin-right: 18px">Delete
         List
       </button>
       <button (click)="newTask($event)" value="{{list.id}}" class="add-btn">Add Task</button>
@@ -33,48 +23,14 @@
         <span>{{task.text}}</span>
         <div>
           <button (click)="deleteTask(task.id)" class="delete-btn">Delete Task</button>
-          <button (click)="deleteTask(task.id)" class="add-btn">Edit Task</button>
         </div>
       </mat-list-item>
       <hr>
     </mat-list>
-
   </div>
-  <!--<div>-->
-  <!--  <div class="publication-form">-->
-  <!--    <form (submit)="addList()">-->
-  <!--      <input type="text" name="list" [(ngModel)]="list.title" placeholder="Add List" required>-->
-  <!--      <button type="submit">Add List</button>-->
-  <!--    </form>-->
-  <!--  </div>-->
-  <!--</div>-->
-  <!--<div>-->
-  <!--  <div class="addList-form">-->
-  <!--    <form (submit)="addTask($event)">-->
-  <!--      <input type="text" name="text" [(ngModel)]="task.text" placeholder="Add Task" required>-->
-  <!--      <button type="submit">Add Task</button>-->
-  <!--    </form>-->
-  <!--  </div>-->
-  <!--</div>-->
-  <div class="col-3">
+  <div class="col-3" style="height: 135px;">
     <app-publications></app-publications>
   </div>
 </div>
-<div class="sizer-wrap" (click)="toggle()" [style.width.px]="sidebarWidth">
-  <div class="right-nav" [style.width.px]="sidebarWidth">
-    <nav-bar></nav-bar>
-  </div>
-  <div class="strip"></div>
-  <div class="sizer">
-    <div class="line"></div>
-  </div>
-  <button class="btn">
-    <div class="overlay">
-      <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>
-      <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>
-    </div>
-    <span class="cursor-pointer fill-current text-white flex-shrink-0 leading-none"></span>
-  </button>
 
-</div>
 <router-outlet></router-outlet>

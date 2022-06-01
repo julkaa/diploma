@@ -2,20 +2,34 @@ const db = require("../config/db.config");
 const Note = db.note;
 
 exports.createNote = (req, res) => {
-  console.log(req.body);
-  // Save User to Database
   Note.create({
     title: req.body.title,
     text: req.body.text,
     user_id: req.body.user_id,
   })
     .then(() => {
-      res.send({ message: "Note created successfuly" });
+      res.send({ message: "Note created successfully" });
     })
     .catch((err) => {
       res.status(500).send("Fail! Error -> " + err);
     });
 };
+
+exports.updateNote = (req, res) => {
+  console.log(req);
+  Note.update({
+    title: req.body.title,
+    text: req.body.text,
+    user_id: req.body.user_id,
+  })
+    .then(() => {
+      res.send({ message: "Note updated successfully" });
+    })
+    .catch((err) => {
+      res.status(500).send("Fail! Error -> " + err);
+    });
+};
+
 exports.getNotes = async (req, res) => {
   console.log(req.params);
   const notes = await Note.findAll({
@@ -23,7 +37,6 @@ exports.getNotes = async (req, res) => {
       user_id: req.params.id,
     },
   });
-  // const tasks = await Task.findAll();
   res.json({ notes: notes });
 };
 exports.getNote = (req, res) => {
@@ -56,7 +69,7 @@ exports.deleteNote = (req, res) => {
       })
     )
     .then((note) => {
-      res.status(200).send({ message: "Deleted" });
+      res.status(200).send({ message: "Note is Deleted" });
     })
     .catch((err) => {
       res.status(500).send("Error -> " + err);

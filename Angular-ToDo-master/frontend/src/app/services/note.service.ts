@@ -24,6 +24,15 @@ export class NoteService {
     });
   }
 
+  updateNote(note) {
+    let headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Authorization', this.getToken());
+    return this.http.post<any>(this.URL + '/update-note', note, {
+      headers: headers,
+    });
+  }
+
   getNotes(user_id) {
     let headers = new HttpHeaders()
       .set('Content-Type', 'application/json')

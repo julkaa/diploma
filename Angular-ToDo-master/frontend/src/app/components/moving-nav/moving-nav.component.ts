@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss'],
+  selector: 'app-moving-nav',
+  templateUrl: './moving-nav.component.html',
+  styleUrls: ['./moving-nav.component.scss'],
 })
-export class PostComponent implements OnInit {
-  expanded = false;
+export class MovingNavComponent implements OnInit {
+  expanded;
 
   constructor() {}
 

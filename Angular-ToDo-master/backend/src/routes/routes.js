@@ -10,6 +10,11 @@ module.exports = function (app) {
   app.post("/login", usercontroller.signin);
   app.post("/add-list", autorizated.validateToken, listController.createList);
   app.post("/add-note", autorizated.validateToken, noteController.createNote);
+  app.post(
+    "/update-note",
+    autorizated.validateToken,
+    noteController.updateNote
+  );
   app.get("/get-notes/:id", noteController.getNotes);
   app.get("/get-lists/:id", listController.getLists);
   app.get("/get-note/:id", noteController.getNote);
@@ -26,7 +31,7 @@ module.exports = function (app) {
   );
   app.post("/add-task", autorizated.validateToken, listController.createTask);
   app.post(
-    "/update-task/:id",
+    "/update-task/",
     autorizated.validateToken,
     listController.updateTask
   );

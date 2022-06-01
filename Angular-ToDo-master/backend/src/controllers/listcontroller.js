@@ -2,15 +2,13 @@ const db = require("../config/db.config");
 const List = db.list;
 const Task = db.task;
 exports.createList = (req, res) => {
-  console.log(req.body);
-  // Save User to Database
   List.create({
     title: req.body.title,
     user_id: req.body.user_id,
     done: false,
   })
     .then(() => {
-      res.send({ message: "List created successfuly" });
+      res.send({ message: "List created successfully" });
     })
     .catch((err) => {
       res.status(500).send("Fail! Error -> " + err);
@@ -56,7 +54,7 @@ exports.deleteList = (req, res) => {
       })
     )
     .then((list) => {
-      res.status(200).send({ message: "Deleted" });
+      res.status(200).send({ message: "List is Deleted" });
     })
     .catch((err) => {
       res.status(500).send("Error -> " + err);
@@ -64,16 +62,15 @@ exports.deleteList = (req, res) => {
 };
 
 exports.createTask = (req, res) => {
-  // Save User to Database
   Task.create({
     text: req.body.text,
     user_id: req.body.user_id,
     list_id: req.body.list_id,
-    done: req.body.IsDone,
+    done: req.body.isDone,
     inprogress: req.body.IsInProgress,
   })
     .then(() => {
-      res.json({ message: "List created successfuly" });
+      res.json({ message: "Task created successfully" });
     })
     .catch((err) => {
       res.status(500).send("Fail! Error -> " + err);
@@ -81,14 +78,15 @@ exports.createTask = (req, res) => {
 };
 exports.updateTask = (req, res) => {
   Task.update({
+    id: +req.body.id,
     text: req.body.text,
     user_id: req.body.user_id,
     list_id: req.body.list_id,
-    done: req.body.IsDone,
+    done: req.body.isDone,
     inprogress: req.body.IsInProgress,
   })
     .then(() => {
-      res.json({ message: "task updated successfuly" });
+      res.json({ message: "Task updated successfully" });
     })
     .catch((err) => {
       res.status(500).send("Fail! Error -> " + err);
@@ -100,8 +98,7 @@ exports.getTasks = (req, res) => {
       res.status(200).send({ task });
     })
     .catch((err) => {
-      //res.status(500).send('Error -> ' + err);
-      console.log("error", err);
+      res.status(500).send("Error -> " + err);
     });
 };
 exports.deleteTask = (req, res) => {

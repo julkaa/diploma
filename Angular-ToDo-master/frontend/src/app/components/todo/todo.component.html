@@ -1,5 +1,15 @@
-<app-top-nav [title]="'To Do'" [listTitle]="listTitle"></app-top-nav>
-<div class="container-fluid gx-4" style="margin-top: 100px">
+<app-top-nav [title]="'To Do'"></app-top-nav>
+
+<div class="moving-nav" (click)="toggle()" [style.left.px]="sidebarWidth">
+  <nav-bar [padding]='80'></nav-bar>
+  <button class="btn">
+    <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>
+    <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>
+  </button>
+</div>
+
+<div class="container-fluid gx-4 main-wrapper">
+  <span class="list-title">{{arrList[0].title}}</span>
   <div class="row">
     <div class="col-md-3 mt-3" style="background: #303030;
         height: max-content;
@@ -18,7 +28,8 @@
                   color="primary" class="add-task">Add
             Task
           </button>
-          <button *ngIf="isEditEnabled" (click)="updateTask(task.id)" mat-raised-button [disabled]="todoForm.invalid"
+          <button *ngIf="isEditEnabled" (click)="updateTask(task.id)" mat-raised-button
+                  [disabled]="todoForm.invalid"
                   color="accent">Update Task
           </button>
         </form>
@@ -84,8 +95,7 @@
               <h2 class="head-title">Done <span *ngIf="done.length > 0"> {{done.length}}</span></h2>
               <div cdkDropList [cdkDropListData]="done" class="drag-drop-list"
                    (cdkDropListDropped)="drop($event)">
-                <div class="drag-drop-box" *ngFor="let task of done; let i = index" cdkDrag
-                     [ngStyle]="{'display': task.list_id == listId ? '' : 'none'}">
+                <div class="drag-drop-box" *ngFor="let task of done; let i = index" cdkDrag>
                   {{task.text}}
                   <div class="box">
                     <button mat-icon-button color="warn" (click)="deleteDoneTask(i)">

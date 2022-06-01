@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TopNavComponent implements OnInit {
   @Input() title;
-  @Input() listTitle = '';
+
+  // @Input() listTitle = '';
 
   constructor() {}
 

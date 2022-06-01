@@ -26,9 +26,11 @@
     "@angular/platform-browser": "~13.3.10",
     "@angular/platform-browser-dynamic": "~13.3.10",
     "@angular/router": "~13.3.10",
+    "@syncfusion/ej2-angular-richtexteditor": "^20.1.58",
     "bootstrap": "^5.2.0-beta1",
     "ngx-quill": "^16.2.1",
     "ngx-sbz-type-delete": "^2.0.3",
+    "quill": "^1.3.6",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"

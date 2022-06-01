@@ -34,6 +34,8 @@ import { MatListModule } from '@angular/material/list';
 import { NoteComponent } from './components/note/note.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TextEditorComponent } from './components/text-editor/text-editor.component';
+import { MovingNavComponent } from './components/moving-nav/moving-nav.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     VideoComponent,
     NoteComponent,
     DialogComponent,
+    TextEditorComponent,
+    MovingNavComponent,
   ],
   imports: [
     BrowserModule,

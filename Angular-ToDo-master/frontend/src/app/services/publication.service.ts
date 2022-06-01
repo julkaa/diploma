@@ -76,7 +76,7 @@ export class PublicationService {
     let headers = new HttpHeaders()
       .set('Content-Type', 'application/json')
       .set('Authorization', this.getToken());
-    return this.http.delete<any>(this.URL + '/update-task/' + task.id, {
+    return this.http.post<any>(this.URL + '/update-task/', task, {
       headers: headers,
     });
   }

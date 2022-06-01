@@ -7,7 +7,6 @@ import {
 } from '@angular/cdk/drag-drop';
 import { PublicationService } from '../../services/publication.service';
 import { UserService } from '../../services/user.service';
-import { Router } from '@angular/router';
 import { List } from '../../interfaces/List';
 import { Task } from '../../interfaces/Task';
 
@@ -29,6 +28,7 @@ export class TodoComponent implements OnInit {
   userId: any;
   lists: List[];
   tasks: Task[];
+  expanded = false;
   isDone = false;
   IsInProgress = false;
   identity = JSON.parse(localStorage.getItem('user'));
@@ -38,16 +38,17 @@ export class TodoComponent implements OnInit {
     text: '',
     user_id: +this.identity.id,
     list_id: +this.listId,
-    inprogress: this.isDone,
-    done: this.IsInProgress,
+    inprogress: this.IsInProgress,
+    done: this.isDone,
   };
-  arr = [];
+  arrTask = [];
+  newTask = [];
+  arrList = [];
 
   constructor(
     private fb: FormBuilder,
     private publicationService: PublicationService,
-    private userService: UserService,
-    private router: Router
+    private userService: UserService
   ) {
     this.user = this.userService.getIdentity();
   }
@@ -59,12 +60,16 @@ export class TodoComponent implements OnInit {
     this.getLists(this.user.userId);
     // this.getTask(this.listId);
 
-    console.log(this.arr);
+    console.log(this.arrList);
   }
 
-  // getTask(idishkalist) {
-  //   console.log(this.task);
-  // }
+  get sidebarWidth(): number {
+    return this.expanded ? 0 : -137;
+  }
+
+  toggle() {
+    this.expanded = !this.expanded;
+  }
 
   addTask(id) {
     this.tasks.push({
@@ -87,20 +92,33 @@ export class TodoComponent implements OnInit {
   }
 
   onEdit(task: Task, i: number) {
-    this.todoForm.controls['task'].setValue(this.task.text);
+    this.task.id = task.id;
+    localStorage.setItem('taskId', task.id);
+    this.todoForm.controls.task.setValue(this.task.text);
     this.updateIndex = i;
     this.isEditEnabled = true;
   }
 
   updateTask(id) {
+    console.log(id);
     this.tasks[this.updateIndex].text = this.todoForm.value.task;
     this.tasks[this.updateIndex].done = false;
-    this.todoForm.reset();
 
-    this.publicationService.editTask(this.tasks[this.updateIndex]).subscribe(
+    this.tasks.forEach((element) => {
+      // const listid = element.list_id;
+      // const trueTaskId = localStorage.getItem('taskId');
+      if (id === element.id) {
+        this.newTask.push(element);
+      }
+    });
+
+    const el = this.newTask[0];
+    console.log(el);
+    this.publicationService.editTask(el).subscribe(
       (res3) => {
         console.log(res3);
         this.refresh();
+        // window.location.reload();
       },
       (err) => {
         console.log(err);
@@ -108,6 +126,7 @@ export class TodoComponent implements OnInit {
     );
     this.updateIndex = undefined;
     this.isEditEnabled = false;
+    this.todoForm.reset();
   }
 
   refresh($event = null) {
@@ -155,19 +174,22 @@ export class TodoComponent implements OnInit {
   }
 
   getLists(idishka) {
-    const userId = this.user.idishka;
-    console.log(this.user.userId);
     this.publicationService.getLists(idishka).subscribe(
       (res) => {
-        this.lists = res.lists;
         res.tasks.forEach((element) => {
           const listid = element.list_id;
           if (listid === this.listId) {
-            this.arr.push(element);
+            this.arrTask.push(element);
           }
         });
-        this.tasks = this.arr;
-        console.log(res);
+        res.lists.forEach((element) => {
+          const listid = element.id;
+          if (listid === this.listId) {
+            this.arrList.push(element);
+          }
+        });
+        this.tasks = this.arrTask;
+        this.lists = this.arrList;
       },
       (err) => {
         console.log(err);
