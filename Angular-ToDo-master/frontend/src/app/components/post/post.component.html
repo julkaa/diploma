@@ -1,12 +1,5 @@
 <app-top-nav [title]="'Posts'"></app-top-nav>
-
-<div class="moving-nav" (click)="toggle()" [style.left.px]="sidebarWidth">
-  <nav-bar [padding]='80'></nav-bar>
-  <button class="btn">
-    <span *ngIf="!expanded" class="material-icons arrow-left">arrow_back_ios_new</span>
-    <span *ngIf="expanded" class="material-icons arrow-right">arrow_forward_ios</span>
-  </button>
-</div>
+<app-moving-nav></app-moving-nav>
 
 <div style="width: 100%; height: 1000px; margin: 120px 0 0 20px">
   <iframe src='https://widgets.sociablekit.com/facebook-group-posts/iframe/81603' width='100%'

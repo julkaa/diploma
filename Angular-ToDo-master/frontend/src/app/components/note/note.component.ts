@@ -14,7 +14,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class NoteComponent implements OnInit {
   user;
   userId: any;
-  expanded = false;
   identity = JSON.parse(localStorage.getItem('user'));
   notes: Note[];
   arrNote = [];
@@ -43,14 +42,6 @@ export class NoteComponent implements OnInit {
     });
   }
 
-  get sidebarWidth(): number {
-    return this.expanded ? 0 : -137;
-  }
-
-  toggle() {
-    this.expanded = !this.expanded;
-  }
-
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponent, {
       width: '40%',
@@ -71,11 +62,9 @@ export class NoteComponent implements OnInit {
   }
 
   onSelectNote(el) {
-    // console.log(this.identity.userId);
     this.note = el;
     this.editNoteForm.get('text').setValue(el.text);
     console.log(el);
-    // window.location.reload();
   }
 
   save() {

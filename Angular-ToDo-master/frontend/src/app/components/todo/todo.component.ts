@@ -28,7 +28,6 @@ export class TodoComponent implements OnInit {
   userId: any;
   lists: List[];
   tasks: Task[];
-  expanded = false;
   isDone = false;
   IsInProgress = false;
   identity = JSON.parse(localStorage.getItem('user'));
@@ -61,14 +60,6 @@ export class TodoComponent implements OnInit {
     // this.getTask(this.listId);
 
     console.log(this.arrList);
-  }
-
-  get sidebarWidth(): number {
-    return this.expanded ? 0 : -137;
-  }
-
-  toggle() {
-    this.expanded = !this.expanded;
   }
 
   addTask(id) {

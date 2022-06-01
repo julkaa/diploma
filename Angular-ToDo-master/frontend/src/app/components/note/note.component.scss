@@ -5,20 +5,6 @@ mat-list-item {
   box-shadow: 0 0 10px 0 #e7e7e7;
 }
 
-.btn {
-  margin: 160px 0 0 120px;
-  position: fixed;
-  z-index: 10;
-  background-color: #726580;
-}
-
-.moving-nav {
-  position: absolute;
-  top: -2px;
-  height: 100%;
-  transition: 1s;
-}
-
 .main-wrapper {
   margin: 120px 20px 10px 20px;
   width: 96%
